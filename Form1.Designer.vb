@@ -46,6 +46,9 @@ Partial Class Form1
         DisplayButton = New ToolTip(components)
         ExitButton = New ToolTip(components)
         ResetButton = New ToolTip(components)
+        Button1 = New Button()
+        Button2 = New Button()
+        Button3 = New Button()
         GroupBox1.SuspendLayout()
         GroupBox2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -201,6 +204,7 @@ Partial Class Form1
         ' 
         PictureBox1.BackColor = SystemColors.ControlText
         PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), Image)
+        PictureBox1.BackgroundImageLayout = ImageLayout.Center
         PictureBox1.ErrorImage = Nothing
         PictureBox1.InitialImage = Nothing
         PictureBox1.Location = New Point(12, 416)
@@ -258,10 +262,10 @@ Partial Class Form1
         TextBox4.Location = New Point(136, 229)
         TextBox4.Multiline = True
         TextBox4.Name = "TextBox4"
-        TextBox4.ScrollBars = ScrollBars.Both
-        TextBox4.Size = New Size(308, 98)
+        TextBox4.ScrollBars = ScrollBars.Vertical
+        TextBox4.Size = New Size(258, 80)
         TextBox4.TabIndex = 6
-        TextBox4.Text = "My Name: Tom Thumb" & vbCrLf & "Major: Philosophy and History" & vbCrLf & "Local phone: (618) 850-2424" & vbCrLf & vbCrLf
+        TextBox4.Text = vbCrLf & vbCrLf
         ' 
         ' Label4
         ' 
@@ -275,16 +279,55 @@ Partial Class Form1
         ' 
         ' DisplayButton
         ' 
+        DisplayButton.BackColor = Color.Black
+        DisplayButton.ForeColor = Color.WhiteSmoke
         DisplayButton.IsBalloon = True
         DisplayButton.OwnerDraw = True
         DisplayButton.ToolTipTitle = "Click to display a message to the output text box"
+        ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.Cyan
+        Button1.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button1.ForeColor = SystemColors.Desktop
+        Button1.Location = New Point(443, 430)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(151, 63)
+        Button1.TabIndex = 9
+        Button1.Text = "Display Message"
+        Button1.UseVisualStyleBackColor = False
+        ' 
+        ' Button2
+        ' 
+        Button2.BackColor = Color.Cyan
+        Button2.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button2.Location = New Point(600, 430)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(112, 63)
+        Button2.TabIndex = 10
+        Button2.Text = "Reset"
+        Button2.UseVisualStyleBackColor = False
+        ' 
+        ' Button3
+        ' 
+        Button3.BackColor = Color.Cyan
+        Button3.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button3.Location = New Point(731, 430)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(112, 63)
+        Button3.TabIndex = 11
+        Button3.Text = "Exit"
+        Button3.UseVisualStyleBackColor = False
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.Info
-        ClientSize = New Size(964, 643)
+        ClientSize = New Size(855, 536)
+        Controls.Add(Button3)
+        Controls.Add(Button2)
+        Controls.Add(Button1)
         Controls.Add(Label4)
         Controls.Add(TextBox4)
         Controls.Add(GroupBox4)
@@ -327,5 +370,8 @@ Partial Class Form1
     Friend WithEvents DisplayButton As ToolTip
     Friend WithEvents ExitButton As ToolTip
     Friend WithEvents ResetButton As ToolTip
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 
 End Class

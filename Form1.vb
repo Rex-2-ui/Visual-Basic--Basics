@@ -18,4 +18,8 @@
     Private Sub Display_Popup(sender As Object, e As PopupEventArgs) Handles DisplayButton.Popup
 
     End Sub
+
+    Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles TextBox4.TextChanged
+
+    End Sub
 End Class
