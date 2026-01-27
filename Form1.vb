@@ -14,4 +14,8 @@
     Private Sub RadioButton6_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton6.CheckedChanged
 
     End Sub
+
+    Private Sub Display_Popup(sender As Object, e As PopupEventArgs) Handles DisplayButton.Popup
+
+    End Sub
 End Class
