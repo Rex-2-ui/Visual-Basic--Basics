@@ -43,12 +43,12 @@ Partial Class Form1
         RadioButton4 = New RadioButton()
         TextBox4 = New TextBox()
         Label4 = New Label()
-        DisplayButton = New ToolTip(components)
-        ExitButton = New ToolTip(components)
-        ResetButton = New ToolTip(components)
         Button1 = New Button()
         Button2 = New Button()
         Button3 = New Button()
+        ToolTip1 = New ToolTip(components)
+        ToolTip2 = New ToolTip(components)
+        ToolTip3 = New ToolTip(components)
         GroupBox1.SuspendLayout()
         GroupBox2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -277,14 +277,6 @@ Partial Class Form1
         Label4.TabIndex = 8
         Label4.Text = "Output:"
         ' 
-        ' DisplayButton
-        ' 
-        DisplayButton.BackColor = Color.Black
-        DisplayButton.ForeColor = Color.WhiteSmoke
-        DisplayButton.IsBalloon = True
-        DisplayButton.OwnerDraw = True
-        DisplayButton.ToolTipTitle = "Click to display a message to the output text box"
-        ' 
         ' Button1
         ' 
         Button1.BackColor = Color.Cyan
@@ -295,6 +287,7 @@ Partial Class Form1
         Button1.Size = New Size(151, 63)
         Button1.TabIndex = 9
         Button1.Text = "Display Message"
+        ToolTip1.SetToolTip(Button1, "Click to display a message to the output text box")
         Button1.UseVisualStyleBackColor = False
         ' 
         ' Button2
@@ -306,6 +299,7 @@ Partial Class Form1
         Button2.Size = New Size(112, 63)
         Button2.TabIndex = 10
         Button2.Text = "Reset"
+        ToolTip2.SetToolTip(Button2, "Clears all fields")
         Button2.UseVisualStyleBackColor = False
         ' 
         ' Button3
@@ -317,6 +311,7 @@ Partial Class Form1
         Button3.Size = New Size(112, 63)
         Button3.TabIndex = 11
         Button3.Text = "Exit"
+        ToolTip3.SetToolTip(Button3, "Closes the application")
         Button3.UseVisualStyleBackColor = False
         ' 
         ' Form1
@@ -367,11 +362,11 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents DisplayButton As ToolTip
-    Friend WithEvents ExitButton As ToolTip
-    Friend WithEvents ResetButton As ToolTip
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents ToolTip2 As ToolTip
+    Friend WithEvents ToolTip3 As ToolTip
 
 End Class
