@@ -1,6 +1,0 @@
-C:\Users\REX\Documents\IT\Y2\SEM ONE\Programming With Visual Basic\Man Bat\WinFormsApp1\obj\Debug\net10.0-windows\WinFormsApp1.Form1.resources
-C:\Users\REX\Documents\IT\Y2\SEM ONE\Programming With Visual Basic\Man Bat\WinFormsApp1\obj\Debug\net10.0-windows\WinFormsApp1.vbproj.GenerateResource.cache
-C:\Users\REX\Documents\IT\Y2\SEM ONE\Programming With Visual Basic\Man Bat\WinFormsApp1\obj\Debug\net10.0-windows\WinFormsApp1.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\REX\Documents\IT\Y2\SEM ONE\Programming With Visual Basic\Man Bat\WinFormsApp1\obj\Debug\net10.0-windows\WinFormsApp1.AssemblyInfoInputs.cache
-C:\Users\REX\Documents\IT\Y2\SEM ONE\Programming With Visual Basic\Man Bat\WinFormsApp1\obj\Debug\net10.0-windows\WinFormsApp1.AssemblyInfo.vb
-C:\Users\REX\Documents\IT\Y2\SEM ONE\Programming With Visual Basic\Man Bat\WinFormsApp1\obj\Debug\net10.0-windows\WinFormsApp1.vbproj.CoreCompileInputs.cache

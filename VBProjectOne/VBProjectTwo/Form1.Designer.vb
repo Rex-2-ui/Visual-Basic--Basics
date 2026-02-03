@@ -149,31 +149,33 @@ Partial Class Form1
         ' 
         ' TextBox6
         ' 
-        TextBox6.Location = New Point(261, 147)
+        TextBox6.Location = New Point(261, 295)
         TextBox6.Name = "TextBox6"
         TextBox6.Size = New Size(125, 30)
         TextBox6.TabIndex = 5
         ' 
         ' TextBox5
         ' 
-        TextBox5.Location = New Point(261, 292)
+        TextBox5.Location = New Point(261, 245)
         TextBox5.Name = "TextBox5"
         TextBox5.Size = New Size(125, 30)
         TextBox5.TabIndex = 4
         ' 
         ' TextBox4
         ' 
-        TextBox4.Location = New Point(261, 242)
+        TextBox4.Location = New Point(261, 198)
         TextBox4.Name = "TextBox4"
         TextBox4.Size = New Size(125, 30)
         TextBox4.TabIndex = 3
+        TextBox4.Text = "2"
         ' 
         ' TextBox3
         ' 
-        TextBox3.Location = New Point(261, 198)
+        TextBox3.Location = New Point(261, 151)
         TextBox3.Name = "TextBox3"
         TextBox3.Size = New Size(125, 30)
         TextBox3.TabIndex = 2
+        TextBox3.Text = "$29.99"
         ' 
         ' TextBox2
         ' 
@@ -181,6 +183,7 @@ Partial Class Form1
         TextBox2.Name = "TextBox2"
         TextBox2.Size = New Size(209, 30)
         TextBox2.TabIndex = 1
+        TextBox2.Text = "0-256-07677-4"
         ' 
         ' TextBox1
         ' 
@@ -188,6 +191,7 @@ Partial Class Form1
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(310, 30)
         TextBox1.TabIndex = 0
+        TextBox1.Text = "SQL Programming by Bruce Wanye"
         ' 
         ' Button1
         ' 
