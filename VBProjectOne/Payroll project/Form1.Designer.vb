@@ -26,15 +26,15 @@ Partial Class Form1
         Label3 = New Label()
         Label2 = New Label()
         Label1 = New Label()
-        CheckBox1 = New CheckBox()
-        TextBox3 = New TextBox()
-        TextBox2 = New TextBox()
-        TextBox1 = New TextBox()
+        WholeSaleCheckBox = New CheckBox()
+        txtvehiclemake = New TextBox()
+        TxtYear = New TextBox()
+        TxtLotNumber = New TextBox()
         GroupBox2 = New GroupBox()
-        RadioButton4 = New RadioButton()
-        RadioButton3 = New RadioButton()
-        RadioButton2 = New RadioButton()
-        RadioButton1 = New RadioButton()
+        BothRadioButton = New RadioButton()
+        UndercoatRadioButton = New RadioButton()
+        PainttouchupRadioButton = New RadioButton()
+        NoneRadiobutton = New RadioButton()
         GroupBox3 = New GroupBox()
         Label10 = New Label()
         Label9 = New Label()
@@ -43,26 +43,26 @@ Partial Class Form1
         Label6 = New Label()
         Label5 = New Label()
         Label4 = New Label()
-        TextBox10 = New TextBox()
-        TextBox9 = New TextBox()
-        TextBox8 = New TextBox()
-        TextBox7 = New TextBox()
-        TextBox6 = New TextBox()
-        TextBox5 = New TextBox()
-        TextBox4 = New TextBox()
-        Button1 = New Button()
-        Button2 = New Button()
-        Button3 = New Button()
-        Button4 = New Button()
-        GroupBox4 = New GroupBox()
-        CheckBox5 = New CheckBox()
-        CheckBox4 = New CheckBox()
-        CheckBox3 = New CheckBox()
-        CheckBox2 = New CheckBox()
+        txttotaldue = New TextBox()
+        txttradein = New TextBox()
+        txtsalestax = New TextBox()
+        txtSubtotal = New TextBox()
+        txtExtras = New TextBox()
+        txtDiscount = New TextBox()
+        txtPrice = New TextBox()
+        ComputeButton = New Button()
+        ResetButton = New Button()
+        TotalsButton = New Button()
+        ExitButton = New Button()
+        GroupBox = New GroupBox()
+        NewFloorMatsCheckBox = New CheckBox()
+        BuiltinGPSCheckBox = New CheckBox()
+        NewHDRadioCheckBox = New CheckBox()
+        NewtiresCheckBox = New CheckBox()
         GroupBox1.SuspendLayout()
         GroupBox2.SuspendLayout()
         GroupBox3.SuspendLayout()
-        GroupBox4.SuspendLayout()
+        GroupBox.SuspendLayout()
         SuspendLayout()
         ' 
         ' GroupBox1
@@ -70,10 +70,10 @@ Partial Class Form1
         GroupBox1.Controls.Add(Label3)
         GroupBox1.Controls.Add(Label2)
         GroupBox1.Controls.Add(Label1)
-        GroupBox1.Controls.Add(CheckBox1)
-        GroupBox1.Controls.Add(TextBox3)
-        GroupBox1.Controls.Add(TextBox2)
-        GroupBox1.Controls.Add(TextBox1)
+        GroupBox1.Controls.Add(WholeSaleCheckBox)
+        GroupBox1.Controls.Add(txtvehiclemake)
+        GroupBox1.Controls.Add(TxtYear)
+        GroupBox1.Controls.Add(TxtLotNumber)
         GroupBox1.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         GroupBox1.Location = New Point(22, 24)
         GroupBox1.Name = "GroupBox1"
@@ -109,43 +109,48 @@ Partial Class Form1
         Label1.TabIndex = 3
         Label1.Text = "Lot Number"
         ' 
-        ' CheckBox1
+        ' WholeSaleCheckBox
         ' 
-        CheckBox1.AutoSize = True
-        CheckBox1.Location = New Point(222, 139)
-        CheckBox1.Name = "CheckBox1"
-        CheckBox1.Size = New Size(189, 27)
-        CheckBox1.TabIndex = 0
-        CheckBox1.Text = "Whole Sale Discount"
-        CheckBox1.UseVisualStyleBackColor = True
+        WholeSaleCheckBox.AutoSize = True
+        WholeSaleCheckBox.Checked = True
+        WholeSaleCheckBox.CheckState = CheckState.Checked
+        WholeSaleCheckBox.Location = New Point(222, 139)
+        WholeSaleCheckBox.Name = "WholeSaleCheckBox"
+        WholeSaleCheckBox.Size = New Size(189, 27)
+        WholeSaleCheckBox.TabIndex = 0
+        WholeSaleCheckBox.Text = "Whole Sale Discount"
+        WholeSaleCheckBox.UseVisualStyleBackColor = True
         ' 
-        ' TextBox3
+        ' txtvehiclemake
         ' 
-        TextBox3.Location = New Point(222, 87)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(445, 30)
-        TextBox3.TabIndex = 2
+        txtvehiclemake.Location = New Point(222, 87)
+        txtvehiclemake.Name = "txtvehiclemake"
+        txtvehiclemake.Size = New Size(445, 30)
+        txtvehiclemake.TabIndex = 2
+        txtvehiclemake.Text = "Ford Escsape"
         ' 
-        ' TextBox2
+        ' TxtYear
         ' 
-        TextBox2.Location = New Point(542, 26)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(125, 30)
-        TextBox2.TabIndex = 1
+        TxtYear.Location = New Point(542, 26)
+        TxtYear.Name = "TxtYear"
+        TxtYear.Size = New Size(125, 30)
+        TxtYear.TabIndex = 1
+        TxtYear.Text = "2010"
         ' 
-        ' TextBox1
+        ' TxtLotNumber
         ' 
-        TextBox1.Location = New Point(222, 26)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(184, 30)
-        TextBox1.TabIndex = 0
+        TxtLotNumber.Location = New Point(222, 26)
+        TxtLotNumber.Name = "TxtLotNumber"
+        TxtLotNumber.Size = New Size(184, 30)
+        TxtLotNumber.TabIndex = 0
+        TxtLotNumber.Text = "779"
         ' 
         ' GroupBox2
         ' 
-        GroupBox2.Controls.Add(RadioButton4)
-        GroupBox2.Controls.Add(RadioButton3)
-        GroupBox2.Controls.Add(RadioButton2)
-        GroupBox2.Controls.Add(RadioButton1)
+        GroupBox2.Controls.Add(BothRadioButton)
+        GroupBox2.Controls.Add(UndercoatRadioButton)
+        GroupBox2.Controls.Add(PainttouchupRadioButton)
+        GroupBox2.Controls.Add(NoneRadiobutton)
         GroupBox2.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         GroupBox2.Location = New Point(465, 236)
         GroupBox2.Name = "GroupBox2"
@@ -154,47 +159,47 @@ Partial Class Form1
         GroupBox2.TabStop = False
         GroupBox2.Text = "Exterior Extras"
         ' 
-        ' RadioButton4
+        ' BothRadioButton
         ' 
-        RadioButton4.AutoSize = True
-        RadioButton4.Location = New Point(49, 139)
-        RadioButton4.Name = "RadioButton4"
-        RadioButton4.Size = New Size(62, 24)
-        RadioButton4.TabIndex = 3
-        RadioButton4.Text = "Both"
-        RadioButton4.UseVisualStyleBackColor = True
+        BothRadioButton.AutoSize = True
+        BothRadioButton.Location = New Point(49, 139)
+        BothRadioButton.Name = "BothRadioButton"
+        BothRadioButton.Size = New Size(62, 24)
+        BothRadioButton.TabIndex = 3
+        BothRadioButton.Text = "Both"
+        BothRadioButton.UseVisualStyleBackColor = True
         ' 
-        ' RadioButton3
+        ' UndercoatRadioButton
         ' 
-        RadioButton3.AutoSize = True
-        RadioButton3.Location = New Point(49, 109)
-        RadioButton3.Name = "RadioButton3"
-        RadioButton3.Size = New Size(102, 24)
-        RadioButton3.TabIndex = 2
-        RadioButton3.Text = "Undercoat"
-        RadioButton3.UseVisualStyleBackColor = True
+        UndercoatRadioButton.AutoSize = True
+        UndercoatRadioButton.Location = New Point(49, 109)
+        UndercoatRadioButton.Name = "UndercoatRadioButton"
+        UndercoatRadioButton.Size = New Size(102, 24)
+        UndercoatRadioButton.TabIndex = 2
+        UndercoatRadioButton.Text = "Undercoat"
+        UndercoatRadioButton.UseVisualStyleBackColor = True
         ' 
-        ' RadioButton2
+        ' PainttouchupRadioButton
         ' 
-        RadioButton2.AutoSize = True
-        RadioButton2.Checked = True
-        RadioButton2.Location = New Point(49, 70)
-        RadioButton2.Name = "RadioButton2"
-        RadioButton2.Size = New Size(136, 24)
-        RadioButton2.TabIndex = 1
-        RadioButton2.TabStop = True
-        RadioButton2.Text = "Paint Touch-Up"
-        RadioButton2.UseVisualStyleBackColor = True
+        PainttouchupRadioButton.AutoSize = True
+        PainttouchupRadioButton.Checked = True
+        PainttouchupRadioButton.Location = New Point(49, 70)
+        PainttouchupRadioButton.Name = "PainttouchupRadioButton"
+        PainttouchupRadioButton.Size = New Size(136, 24)
+        PainttouchupRadioButton.TabIndex = 1
+        PainttouchupRadioButton.TabStop = True
+        PainttouchupRadioButton.Text = "Paint Touch-Up"
+        PainttouchupRadioButton.UseVisualStyleBackColor = True
         ' 
-        ' RadioButton1
+        ' NoneRadiobutton
         ' 
-        RadioButton1.AutoSize = True
-        RadioButton1.Location = New Point(49, 40)
-        RadioButton1.Name = "RadioButton1"
-        RadioButton1.Size = New Size(68, 24)
-        RadioButton1.TabIndex = 0
-        RadioButton1.Text = "None"
-        RadioButton1.UseVisualStyleBackColor = True
+        NoneRadiobutton.AutoSize = True
+        NoneRadiobutton.Location = New Point(49, 40)
+        NoneRadiobutton.Name = "NoneRadiobutton"
+        NoneRadiobutton.Size = New Size(68, 24)
+        NoneRadiobutton.TabIndex = 0
+        NoneRadiobutton.Text = "None"
+        NoneRadiobutton.UseVisualStyleBackColor = True
         ' 
         ' GroupBox3
         ' 
@@ -205,13 +210,13 @@ Partial Class Form1
         GroupBox3.Controls.Add(Label6)
         GroupBox3.Controls.Add(Label5)
         GroupBox3.Controls.Add(Label4)
-        GroupBox3.Controls.Add(TextBox10)
-        GroupBox3.Controls.Add(TextBox9)
-        GroupBox3.Controls.Add(TextBox8)
-        GroupBox3.Controls.Add(TextBox7)
-        GroupBox3.Controls.Add(TextBox6)
-        GroupBox3.Controls.Add(TextBox5)
-        GroupBox3.Controls.Add(TextBox4)
+        GroupBox3.Controls.Add(txttotaldue)
+        GroupBox3.Controls.Add(txttradein)
+        GroupBox3.Controls.Add(txtsalestax)
+        GroupBox3.Controls.Add(txtSubtotal)
+        GroupBox3.Controls.Add(txtExtras)
+        GroupBox3.Controls.Add(txtDiscount)
+        GroupBox3.Controls.Add(txtPrice)
         GroupBox3.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         GroupBox3.Location = New Point(22, 236)
         GroupBox3.Name = "GroupBox3"
@@ -283,172 +288,186 @@ Partial Class Form1
         Label4.TabIndex = 8
         Label4.Text = "Price"
         ' 
-        ' TextBox10
+        ' txttotaldue
         ' 
-        TextBox10.Location = New Point(129, 335)
-        TextBox10.Name = "TextBox10"
-        TextBox10.Size = New Size(125, 30)
-        TextBox10.TabIndex = 7
-        TextBox10.TextAlign = HorizontalAlignment.Right
+        txttotaldue.Location = New Point(129, 335)
+        txttotaldue.Name = "txttotaldue"
+        txttotaldue.Size = New Size(125, 30)
+        txttotaldue.TabIndex = 7
+        txttotaldue.Text = "$13.945.95"
+        txttotaldue.TextAlign = HorizontalAlignment.Right
         ' 
-        ' TextBox9
+        ' txttradein
         ' 
-        TextBox9.Location = New Point(129, 288)
-        TextBox9.Name = "TextBox9"
-        TextBox9.Size = New Size(125, 30)
-        TextBox9.TabIndex = 6
-        TextBox9.TextAlign = HorizontalAlignment.Right
+        txttradein.Location = New Point(129, 288)
+        txttradein.Name = "txttradein"
+        txttradein.Size = New Size(125, 30)
+        txttradein.TabIndex = 6
+        txttradein.Text = "0.00"
+        txttradein.TextAlign = HorizontalAlignment.Right
         ' 
-        ' TextBox8
+        ' txtsalestax
         ' 
-        TextBox8.Location = New Point(129, 236)
-        TextBox8.Name = "TextBox8"
-        TextBox8.Size = New Size(125, 30)
-        TextBox8.TabIndex = 5
-        TextBox8.TextAlign = HorizontalAlignment.Right
+        txtsalestax.Location = New Point(129, 236)
+        txtsalestax.Name = "txtsalestax"
+        txtsalestax.ReadOnly = True
+        txtsalestax.Size = New Size(125, 30)
+        txtsalestax.TabIndex = 5
+        txtsalestax.Text = "0.00"
+        txtsalestax.TextAlign = HorizontalAlignment.Right
         ' 
-        ' TextBox7
+        ' txtSubtotal
         ' 
-        TextBox7.Location = New Point(129, 186)
-        TextBox7.Name = "TextBox7"
-        TextBox7.Size = New Size(125, 30)
-        TextBox7.TabIndex = 4
-        TextBox7.TextAlign = HorizontalAlignment.Right
+        txtSubtotal.Location = New Point(129, 186)
+        txtSubtotal.Name = "txtSubtotal"
+        txtSubtotal.ReadOnly = True
+        txtSubtotal.Size = New Size(125, 30)
+        txtSubtotal.TabIndex = 4
+        txtSubtotal.Text = "0.00"
+        txtSubtotal.TextAlign = HorizontalAlignment.Right
         ' 
-        ' TextBox6
+        ' txtExtras
         ' 
-        TextBox6.Location = New Point(129, 136)
-        TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(125, 30)
-        TextBox6.TabIndex = 3
-        TextBox6.TextAlign = HorizontalAlignment.Right
+        txtExtras.Location = New Point(129, 136)
+        txtExtras.Name = "txtExtras"
+        txtExtras.ReadOnly = True
+        txtExtras.Size = New Size(125, 30)
+        txtExtras.TabIndex = 3
+        txtExtras.Text = "945.95"
+        txtExtras.TextAlign = HorizontalAlignment.Right
         ' 
-        ' TextBox5
+        ' txtDiscount
         ' 
-        TextBox5.Location = New Point(129, 87)
-        TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(125, 30)
-        TextBox5.TabIndex = 2
-        TextBox5.TextAlign = HorizontalAlignment.Right
+        txtDiscount.AcceptsTab = True
+        txtDiscount.Enabled = False
+        txtDiscount.Location = New Point(129, 87)
+        txtDiscount.Name = "txtDiscount"
+        txtDiscount.ReadOnly = True
+        txtDiscount.Size = New Size(125, 30)
+        txtDiscount.TabIndex = 2
+        txtDiscount.TabStop = False
+        txtDiscount.Text = "3,250.00"
+        txtDiscount.TextAlign = HorizontalAlignment.Right
         ' 
-        ' TextBox4
+        ' txtPrice
         ' 
-        TextBox4.Location = New Point(129, 37)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(125, 30)
-        TextBox4.TabIndex = 1
-        TextBox4.TextAlign = HorizontalAlignment.Right
+        txtPrice.Location = New Point(129, 37)
+        txtPrice.Name = "txtPrice"
+        txtPrice.Size = New Size(125, 30)
+        txtPrice.TabIndex = 1
+        txtPrice.Text = "$16,250.00"
+        txtPrice.TextAlign = HorizontalAlignment.Right
         ' 
-        ' Button1
+        ' ComputeButton
         ' 
-        Button1.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button1.Location = New Point(244, 659)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(111, 49)
-        Button1.TabIndex = 2
-        Button1.Text = "Compute "
-        Button1.UseVisualStyleBackColor = True
+        ComputeButton.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        ComputeButton.Location = New Point(244, 659)
+        ComputeButton.Name = "ComputeButton"
+        ComputeButton.Size = New Size(111, 49)
+        ComputeButton.TabIndex = 2
+        ComputeButton.Text = "Compute "
+        ComputeButton.UseVisualStyleBackColor = True
         ' 
-        ' Button2
+        ' ResetButton
         ' 
-        Button2.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button2.Location = New Point(394, 659)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(104, 49)
-        Button2.TabIndex = 3
-        Button2.Text = "Reset"
-        Button2.UseVisualStyleBackColor = True
+        ResetButton.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        ResetButton.Location = New Point(394, 659)
+        ResetButton.Name = "ResetButton"
+        ResetButton.Size = New Size(104, 49)
+        ResetButton.TabIndex = 3
+        ResetButton.Text = "Reset"
+        ResetButton.UseVisualStyleBackColor = True
         ' 
-        ' Button3
+        ' TotalsButton
         ' 
-        Button3.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button3.Location = New Point(543, 659)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(98, 49)
-        Button3.TabIndex = 4
-        Button3.Text = "Totals"
-        Button3.UseVisualStyleBackColor = True
+        TotalsButton.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        TotalsButton.Location = New Point(543, 659)
+        TotalsButton.Name = "TotalsButton"
+        TotalsButton.Size = New Size(98, 49)
+        TotalsButton.TabIndex = 4
+        TotalsButton.Text = "Totals"
+        TotalsButton.UseVisualStyleBackColor = True
         ' 
-        ' Button4
+        ' ExitButton
         ' 
-        Button4.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button4.Location = New Point(688, 659)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(102, 49)
-        Button4.TabIndex = 5
-        Button4.Text = "Exit"
-        Button4.UseVisualStyleBackColor = True
+        ExitButton.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        ExitButton.Location = New Point(688, 659)
+        ExitButton.Name = "ExitButton"
+        ExitButton.Size = New Size(102, 49)
+        ExitButton.TabIndex = 5
+        ExitButton.Text = "Exit"
+        ExitButton.UseVisualStyleBackColor = True
         ' 
-        ' GroupBox4
+        ' GroupBox
         ' 
-        GroupBox4.Controls.Add(CheckBox5)
-        GroupBox4.Controls.Add(CheckBox4)
-        GroupBox4.Controls.Add(CheckBox3)
-        GroupBox4.Controls.Add(CheckBox2)
-        GroupBox4.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        GroupBox4.Location = New Point(465, 429)
-        GroupBox4.Name = "GroupBox4"
-        GroupBox4.Size = New Size(290, 196)
-        GroupBox4.TabIndex = 6
-        GroupBox4.TabStop = False
-        GroupBox4.Text = "Accessory Extras"
+        GroupBox.Controls.Add(NewFloorMatsCheckBox)
+        GroupBox.Controls.Add(BuiltinGPSCheckBox)
+        GroupBox.Controls.Add(NewHDRadioCheckBox)
+        GroupBox.Controls.Add(NewtiresCheckBox)
+        GroupBox.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        GroupBox.Location = New Point(465, 429)
+        GroupBox.Name = "GroupBox"
+        GroupBox.Size = New Size(290, 196)
+        GroupBox.TabIndex = 6
+        GroupBox.TabStop = False
+        GroupBox.Text = "Accessory Extras"
         ' 
-        ' CheckBox5
+        ' NewFloorMatsCheckBox
         ' 
-        CheckBox5.AutoSize = True
-        CheckBox5.Checked = True
-        CheckBox5.CheckState = CheckState.Checked
-        CheckBox5.Location = New Point(26, 151)
-        CheckBox5.Name = "CheckBox5"
-        CheckBox5.Size = New Size(154, 27)
-        CheckBox5.TabIndex = 4
-        CheckBox5.Text = "New Floor Mats"
-        CheckBox5.UseVisualStyleBackColor = True
+        NewFloorMatsCheckBox.AutoSize = True
+        NewFloorMatsCheckBox.Checked = True
+        NewFloorMatsCheckBox.CheckState = CheckState.Checked
+        NewFloorMatsCheckBox.Location = New Point(26, 151)
+        NewFloorMatsCheckBox.Name = "NewFloorMatsCheckBox"
+        NewFloorMatsCheckBox.Size = New Size(154, 27)
+        NewFloorMatsCheckBox.TabIndex = 4
+        NewFloorMatsCheckBox.Text = "New Floor Mats"
+        NewFloorMatsCheckBox.UseVisualStyleBackColor = True
         ' 
-        ' CheckBox4
+        ' BuiltinGPSCheckBox
         ' 
-        CheckBox4.AutoSize = True
-        CheckBox4.Location = New Point(26, 113)
-        CheckBox4.Name = "CheckBox4"
-        CheckBox4.Size = New Size(122, 27)
-        CheckBox4.TabIndex = 3
-        CheckBox4.Text = "Built-in GPS"
-        CheckBox4.UseVisualStyleBackColor = True
+        BuiltinGPSCheckBox.AutoSize = True
+        BuiltinGPSCheckBox.Location = New Point(26, 113)
+        BuiltinGPSCheckBox.Name = "BuiltinGPSCheckBox"
+        BuiltinGPSCheckBox.Size = New Size(122, 27)
+        BuiltinGPSCheckBox.TabIndex = 3
+        BuiltinGPSCheckBox.Text = "Built-in GPS"
+        BuiltinGPSCheckBox.UseVisualStyleBackColor = True
         ' 
-        ' CheckBox3
+        ' NewHDRadioCheckBox
         ' 
-        CheckBox3.AutoSize = True
-        CheckBox3.Checked = True
-        CheckBox3.CheckState = CheckState.Checked
-        CheckBox3.Location = New Point(26, 72)
-        CheckBox3.Name = "CheckBox3"
-        CheckBox3.Size = New Size(150, 27)
-        CheckBox3.TabIndex = 2
-        CheckBox3.Text = "Paint Touch-Up"
-        CheckBox3.UseVisualStyleBackColor = True
+        NewHDRadioCheckBox.AutoSize = True
+        NewHDRadioCheckBox.Checked = True
+        NewHDRadioCheckBox.CheckState = CheckState.Checked
+        NewHDRadioCheckBox.Location = New Point(26, 72)
+        NewHDRadioCheckBox.Name = "NewHDRadioCheckBox"
+        NewHDRadioCheckBox.Size = New Size(146, 27)
+        NewHDRadioCheckBox.TabIndex = 2
+        NewHDRadioCheckBox.Text = "New HD Radio"
+        NewHDRadioCheckBox.UseVisualStyleBackColor = True
         ' 
-        ' CheckBox2
+        ' NewtiresCheckBox
         ' 
-        CheckBox2.AutoSize = True
-        CheckBox2.Checked = True
-        CheckBox2.CheckState = CheckState.Checked
-        CheckBox2.Location = New Point(26, 26)
-        CheckBox2.Name = "CheckBox2"
-        CheckBox2.Size = New Size(107, 27)
-        CheckBox2.TabIndex = 1
-        CheckBox2.Text = "New Tires"
-        CheckBox2.UseVisualStyleBackColor = True
+        NewtiresCheckBox.AutoSize = True
+        NewtiresCheckBox.Checked = True
+        NewtiresCheckBox.CheckState = CheckState.Checked
+        NewtiresCheckBox.Location = New Point(26, 26)
+        NewtiresCheckBox.Name = "NewtiresCheckBox"
+        NewtiresCheckBox.Size = New Size(107, 27)
+        NewtiresCheckBox.TabIndex = 1
+        NewtiresCheckBox.Text = "New Tires"
+        NewtiresCheckBox.UseVisualStyleBackColor = True
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(840, 720)
-        Controls.Add(GroupBox4)
-        Controls.Add(Button4)
-        Controls.Add(Button3)
-        Controls.Add(Button2)
-        Controls.Add(Button1)
+        Controls.Add(GroupBox)
+        Controls.Add(ExitButton)
+        Controls.Add(TotalsButton)
+        Controls.Add(ResetButton)
+        Controls.Add(ComputeButton)
         Controls.Add(GroupBox3)
         Controls.Add(GroupBox2)
         Controls.Add(GroupBox1)
@@ -460,47 +479,47 @@ Partial Class Form1
         GroupBox2.PerformLayout()
         GroupBox3.ResumeLayout(False)
         GroupBox3.PerformLayout()
-        GroupBox4.ResumeLayout(False)
-        GroupBox4.PerformLayout()
+        GroupBox.ResumeLayout(False)
+        GroupBox.PerformLayout()
         ResumeLayout(False)
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtvehiclemake As TextBox
+    Friend WithEvents TxtYear As TextBox
+    Friend WithEvents TxtLotNumber As TextBox
+    Friend WithEvents txtExtras As TextBox
+    Friend WithEvents txtDiscount As TextBox
+    Friend WithEvents txtPrice As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents txttotaldue As TextBox
+    Friend WithEvents txttradein As TextBox
+    Friend WithEvents txtsalestax As TextBox
+    Friend WithEvents txtSubtotal As TextBox
+    Friend WithEvents ComputeButton As Button
+    Friend WithEvents ResetButton As Button
+    Friend WithEvents TotalsButton As Button
+    Friend WithEvents ExitButton As Button
+    Friend WithEvents GroupBox As GroupBox
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents RadioButton4 As RadioButton
-    Friend WithEvents RadioButton3 As RadioButton
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
-    Friend WithEvents CheckBox4 As CheckBox
-    Friend WithEvents CheckBox3 As CheckBox
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents CheckBox5 As CheckBox
+    Friend WithEvents BothRadioButton As RadioButton
+    Friend WithEvents UndercoatRadioButton As RadioButton
+    Friend WithEvents PainttouchupRadioButton As RadioButton
+    Friend WithEvents NoneRadiobutton As RadioButton
+    Friend WithEvents BuiltinGPSCheckBox As CheckBox
+    Friend WithEvents NewHDRadioCheckBox As CheckBox
+    Friend WithEvents NewtiresCheckBox As CheckBox
+    Friend WithEvents WholeSaleCheckBox As CheckBox
+    Friend WithEvents NewFloorMatsCheckBox As CheckBox
 
 End Class
