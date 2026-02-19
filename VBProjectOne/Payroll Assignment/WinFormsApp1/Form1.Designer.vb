@@ -32,8 +32,6 @@ Partial Class Form1
         CloseButton = New Button()
         EmployeeInformationGroupBox = New GroupBox()
         SalesInformationGroupBox = New GroupBox()
-        Label6 = New Label()
-        TextBox6 = New TextBox()
         TotalPayLabel = New Label()
         TotalPayTextBox = New TextBox()
         PricePerPieceLabel = New Label()
@@ -125,15 +123,13 @@ Partial Class Form1
         EmployeeInformationGroupBox.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         EmployeeInformationGroupBox.Location = New Point(35, 46)
         EmployeeInformationGroupBox.Name = "EmployeeInformationGroupBox"
-        EmployeeInformationGroupBox.Size = New Size(734, 146)
+        EmployeeInformationGroupBox.Size = New Size(606, 146)
         EmployeeInformationGroupBox.TabIndex = 8
         EmployeeInformationGroupBox.TabStop = False
         EmployeeInformationGroupBox.Text = "Employee Information"
         ' 
         ' SalesInformationGroupBox
         ' 
-        SalesInformationGroupBox.Controls.Add(Label6)
-        SalesInformationGroupBox.Controls.Add(TextBox6)
         SalesInformationGroupBox.Controls.Add(TotalPayLabel)
         SalesInformationGroupBox.Controls.Add(TotalPayTextBox)
         SalesInformationGroupBox.Controls.Add(PricePerPieceLabel)
@@ -143,27 +139,10 @@ Partial Class Form1
         SalesInformationGroupBox.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         SalesInformationGroupBox.Location = New Point(35, 231)
         SalesInformationGroupBox.Name = "SalesInformationGroupBox"
-        SalesInformationGroupBox.Size = New Size(481, 235)
+        SalesInformationGroupBox.Size = New Size(481, 202)
         SalesInformationGroupBox.TabIndex = 9
         SalesInformationGroupBox.TabStop = False
         SalesInformationGroupBox.Text = "Sales Information"
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.Location = New Point(43, 200)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(53, 20)
-        Label6.TabIndex = 7
-        Label6.Text = "Label6"
-        ' 
-        ' TextBox6
-        ' 
-        TextBox6.Location = New Point(195, 193)
-        TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(199, 27)
-        TextBox6.TabIndex = 6
-        TextBox6.TextAlign = HorizontalAlignment.Right
         ' 
         ' TotalPayLabel
         ' 
@@ -209,7 +188,6 @@ Partial Class Form1
         PricePerPieceTextbox.Size = New Size(239, 27)
         PricePerPieceTextbox.TabIndex = 3
         PricePerPieceTextbox.TextAlign = HorizontalAlignment.Right
-        PricePerPieceTextbox.Visible = False
         ' 
         ' AmountEarnedTextbox
         ' 
@@ -256,7 +234,5 @@ Partial Class Form1
     Friend WithEvents AmountEarnedLabel As Label
     Friend WithEvents PricePerPieceTextbox As TextBox
     Friend WithEvents AmountEarnedTextbox As TextBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox6 As TextBox
 
 End Class
