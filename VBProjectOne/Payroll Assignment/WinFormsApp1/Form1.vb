@@ -51,9 +51,9 @@
         If Integer.TryParse(NumberofPiecesTextBox.Text, NumberOfPieces) Then
             If NumberOfPieces >= 1 And NumberOfPieces <= 200 Then
                 PricePerPiece = 60
-            ElseIf NumberOfPieces >= 201 And NumberOfPieces <= 400 Then
+            ElseIf NumberOfPieces <= 400 Then
                 PricePerPiece = 65
-            ElseIf NumberOfPieces >= 401 And NumberOfPieces <= 600 Then
+            ElseIf NumberOfPieces <= 600 Then
                 PricePerPiece = 70
             ElseIf NumberOfPieces > 600 Then
                 PricePerPiece = 75
