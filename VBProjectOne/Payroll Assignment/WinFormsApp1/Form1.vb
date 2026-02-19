@@ -21,6 +21,7 @@
     End Sub
 
     Private Sub CloseButton_Click(sender As Object, e As EventArgs) Handles CloseButton.Click
+
         Dim MessageString As String = "Are you sure you want to close the application?"
         Dim MessageTitle As String = "Close Application"
         Dim MessageButton As MessageBoxButtons = MessageBoxButtons.YesNo
@@ -39,7 +40,6 @@
         Dim PricePerPiece As Integer
         Dim NumberOfPieces As Integer
         Dim AmountEarned As Decimal
-
 
         If String.IsNullOrWhiteSpace(EmployeeNameTextBox.Text) Then
             MessageBox.Show("Please enter the employee's name.", "Missing Name", MessageBoxButtons.OK, MessageBoxIcon.Warning)

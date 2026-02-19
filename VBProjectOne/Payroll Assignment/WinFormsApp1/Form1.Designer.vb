@@ -202,7 +202,7 @@ Partial Class Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(873, 523)
+        ClientSize = New Size(844, 523)
         Controls.Add(SalesInformationGroupBox)
         Controls.Add(EmployeeInformationGroupBox)
         Controls.Add(CloseButton)
