@@ -22,12 +22,13 @@
 
     Private Sub CloseButton_Click(sender As Object, e As EventArgs) Handles CloseButton.Click
 
-        Dim MessageString As String = "Are you sure you want to close the application?"
-        Dim MessageTitle As String = "Close Application"
-        Dim MessageButton As MessageBoxButtons = MessageBoxButtons.YesNo
-        Dim MessageIcon As MessageBoxIcon = MessageBoxIcon.Question
+        'Dim MessageString As String = "Are you sure you want to close the application?"
+        'Dim MessageTitle As String = "Close Application"
+        'Dim MessageButton As MessageBoxButtons = MessageBoxButtons.YesNo
+        'Dim MessageIcon As MessageBoxIcon = MessageBoxIcon.Question
         Dim MessageResult As DialogResult
-        MessageResult = MessageBox.Show(MessageString, MessageTitle, MessageButton, MessageIcon)
+        'MessageResult = MessageBox.Show(MessageString, MessageTitle, MessageButton, MessageIcon)
+        MessageResult = MessageBox.Show("Are you sure you want to close the application?", "Close Application", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If MessageResult = DialogResult.Yes Then
 
             Me.Close()
