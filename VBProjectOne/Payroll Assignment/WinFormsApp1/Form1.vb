@@ -48,7 +48,7 @@
         End If
 
 
-        If Integer.TryParse(NumberofPiecesTextBox.Text, NumberOfPieces) Then
+        If Integer.Parse(NumberofPiecesTextBox.Text, Globalization.NumberStyles.Number) Then
             If NumberOfPieces >= 1 And NumberOfPieces <= 200 Then
                 PricePerPiece = 60
             ElseIf NumberOfPieces <= 400 Then
@@ -72,6 +72,7 @@
         TotalPayTextBox.Text = TotalPay.ToString("C")
         NumberOfEntries += 1
 
+
     End Sub
 
     Private Sub SumaryButton_Click(sender As Object, e As EventArgs) Handles SumaryButton.Click
@@ -92,5 +93,9 @@
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CalculateButton.Enabled = True
         ClearButton.Enabled = True
+    End Sub
+
+    Private Sub CalculateButton_Validated(sender As Object, e As EventArgs) Handles CalculateButton.Validated
+
     End Sub
 End Class
