@@ -121,4 +121,8 @@
         MessageBox.Show("Total Vehicles Processed: " & TotalSalesCount.ToString() & vbCrLf &
                     "Total Revenue: " & TotalRevenue.ToString("C"), "Sales Summary")
     End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

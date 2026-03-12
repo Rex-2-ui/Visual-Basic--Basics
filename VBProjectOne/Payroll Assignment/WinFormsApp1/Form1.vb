@@ -1,4 +1,6 @@
-﻿Public Class Form1
+﻿Imports System.ComponentModel
+
+Public Class Form1
 
     Dim TotalPieces As Integer = 0
     Dim TotalPay As Decimal = 0
@@ -38,6 +40,22 @@
     End Sub
 
     Private Sub CalculateButton_Click(sender As Object, e As EventArgs) Handles CalculateButton.Click
+        'Try
+        '    NumberofPiecesTextBox.string = Integer.Parse(NumberofPiecesTextBox.Text, Globalization.NumberStyles.Number)
+        'Catch ex As Exception
+        '    MessageBox.Show("Please enter a valid number of pieces.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    NumberofPiecesTextBox.Focus()
+        '    Return
+        'End Try
+        'Try
+        '    EmployeeNameTextBox.Text = EmployeeNameTextBox.Text.Trim()
+
+        'Catch ex As Exception
+        '    MessageBox.Show("An error occurred while processing the employee's name. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    EmployeeNameTextBox.Focus()
+        '    Return
+
+        'End Try
         Dim PricePerPiece As Integer
         Dim NumberOfPieces As Integer
         Dim AmountEarned As Decimal
@@ -94,9 +112,14 @@
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CalculateButton.Enabled = True
         ClearButton.Enabled = True
+
     End Sub
 
     Private Sub CalculateButton_Validated(sender As Object, e As EventArgs) Handles CalculateButton.Validated
+
+    End Sub
+
+    Private Sub ClearButton_Validating(sender As Object, e As CancelEventArgs) Handles ClearButton.Validating
 
     End Sub
 End Class

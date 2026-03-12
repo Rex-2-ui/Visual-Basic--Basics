@@ -462,7 +462,7 @@ Partial Class Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(840, 720)
+        ClientSize = New Size(911, 741)
         Controls.Add(GroupBox)
         Controls.Add(ExitButton)
         Controls.Add(TotalsButton)
