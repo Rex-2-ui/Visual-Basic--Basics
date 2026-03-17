@@ -30,11 +30,6 @@ Partial Class Form1
         txtvehiclemake = New TextBox()
         TxtYear = New TextBox()
         TxtLotNumber = New TextBox()
-        GroupBox2 = New GroupBox()
-        BothRadioButton = New RadioButton()
-        UndercoatRadioButton = New RadioButton()
-        PainttouchupRadioButton = New RadioButton()
-        NoneRadiobutton = New RadioButton()
         GroupBox3 = New GroupBox()
         Label10 = New Label()
         Label9 = New Label()
@@ -59,10 +54,26 @@ Partial Class Form1
         BuiltinGPSCheckBox = New CheckBox()
         NewHDRadioCheckBox = New CheckBox()
         NewtiresCheckBox = New CheckBox()
+        NoneRadiobutton = New RadioButton()
+        PainttouchupRadioButton = New RadioButton()
+        UndercoatRadioButton = New RadioButton()
+        BothRadioButton = New RadioButton()
+        GroupBox2 = New GroupBox()
+        MenuStrip1 = New MenuStrip()
+        OptionsToolStripMenuItem = New ToolStripMenuItem()
+        CarTypeToolStripMenuItem = New ToolStripMenuItem()
+        FontColorToolStripMenuItem = New ToolStripMenuItem()
+        MoreToolStripMenuItem = New ToolStripMenuItem()
+        CommandsToolStripMenu = New ToolStripMenuItem()
+        MenuCompute = New ToolStripMenuItem()
+        MenuTotal = New ToolStripMenuItem()
+        MenuReset = New ToolStripMenuItem()
+        MenuExit = New ToolStripMenuItem()
         GroupBox1.SuspendLayout()
-        GroupBox2.SuspendLayout()
         GroupBox3.SuspendLayout()
         GroupBox.SuspendLayout()
+        GroupBox2.SuspendLayout()
+        MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
         ' GroupBox1
@@ -75,7 +86,7 @@ Partial Class Form1
         GroupBox1.Controls.Add(TxtYear)
         GroupBox1.Controls.Add(TxtLotNumber)
         GroupBox1.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        GroupBox1.Location = New Point(22, 24)
+        GroupBox1.Location = New Point(22, 68)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Size = New Size(733, 185)
         GroupBox1.TabIndex = 0
@@ -145,62 +156,6 @@ Partial Class Form1
         TxtLotNumber.TabIndex = 0
         TxtLotNumber.Text = "779"
         ' 
-        ' GroupBox2
-        ' 
-        GroupBox2.Controls.Add(BothRadioButton)
-        GroupBox2.Controls.Add(UndercoatRadioButton)
-        GroupBox2.Controls.Add(PainttouchupRadioButton)
-        GroupBox2.Controls.Add(NoneRadiobutton)
-        GroupBox2.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        GroupBox2.Location = New Point(465, 236)
-        GroupBox2.Name = "GroupBox2"
-        GroupBox2.Size = New Size(290, 181)
-        GroupBox2.TabIndex = 1
-        GroupBox2.TabStop = False
-        GroupBox2.Text = "Exterior Extras"
-        ' 
-        ' BothRadioButton
-        ' 
-        BothRadioButton.AutoSize = True
-        BothRadioButton.Location = New Point(49, 139)
-        BothRadioButton.Name = "BothRadioButton"
-        BothRadioButton.Size = New Size(62, 24)
-        BothRadioButton.TabIndex = 3
-        BothRadioButton.Text = "Both"
-        BothRadioButton.UseVisualStyleBackColor = True
-        ' 
-        ' UndercoatRadioButton
-        ' 
-        UndercoatRadioButton.AutoSize = True
-        UndercoatRadioButton.Location = New Point(49, 109)
-        UndercoatRadioButton.Name = "UndercoatRadioButton"
-        UndercoatRadioButton.Size = New Size(102, 24)
-        UndercoatRadioButton.TabIndex = 2
-        UndercoatRadioButton.Text = "Undercoat"
-        UndercoatRadioButton.UseVisualStyleBackColor = True
-        ' 
-        ' PainttouchupRadioButton
-        ' 
-        PainttouchupRadioButton.AutoSize = True
-        PainttouchupRadioButton.Checked = True
-        PainttouchupRadioButton.Location = New Point(49, 70)
-        PainttouchupRadioButton.Name = "PainttouchupRadioButton"
-        PainttouchupRadioButton.Size = New Size(136, 24)
-        PainttouchupRadioButton.TabIndex = 1
-        PainttouchupRadioButton.TabStop = True
-        PainttouchupRadioButton.Text = "Paint Touch-Up"
-        PainttouchupRadioButton.UseVisualStyleBackColor = True
-        ' 
-        ' NoneRadiobutton
-        ' 
-        NoneRadiobutton.AutoSize = True
-        NoneRadiobutton.Location = New Point(49, 40)
-        NoneRadiobutton.Name = "NoneRadiobutton"
-        NoneRadiobutton.Size = New Size(68, 24)
-        NoneRadiobutton.TabIndex = 0
-        NoneRadiobutton.Text = "None"
-        NoneRadiobutton.UseVisualStyleBackColor = True
-        ' 
         ' GroupBox3
         ' 
         GroupBox3.Controls.Add(Label10)
@@ -218,9 +173,9 @@ Partial Class Form1
         GroupBox3.Controls.Add(txtDiscount)
         GroupBox3.Controls.Add(txtPrice)
         GroupBox3.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        GroupBox3.Location = New Point(22, 236)
+        GroupBox3.Location = New Point(22, 273)
         GroupBox3.Name = "GroupBox3"
-        GroupBox3.Size = New Size(361, 368)
+        GroupBox3.Size = New Size(364, 383)
         GroupBox3.TabIndex = 1
         GroupBox3.TabStop = False
         GroupBox3.Text = "Sales Information"
@@ -361,7 +316,7 @@ Partial Class Form1
         ' ComputeButton
         ' 
         ComputeButton.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        ComputeButton.Location = New Point(244, 659)
+        ComputeButton.Location = New Point(244, 680)
         ComputeButton.Name = "ComputeButton"
         ComputeButton.Size = New Size(111, 49)
         ComputeButton.TabIndex = 2
@@ -371,7 +326,7 @@ Partial Class Form1
         ' ResetButton
         ' 
         ResetButton.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        ResetButton.Location = New Point(394, 659)
+        ResetButton.Location = New Point(399, 679)
         ResetButton.Name = "ResetButton"
         ResetButton.Size = New Size(104, 49)
         ResetButton.TabIndex = 3
@@ -381,7 +336,7 @@ Partial Class Form1
         ' TotalsButton
         ' 
         TotalsButton.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        TotalsButton.Location = New Point(543, 659)
+        TotalsButton.Location = New Point(539, 679)
         TotalsButton.Name = "TotalsButton"
         TotalsButton.Size = New Size(98, 49)
         TotalsButton.TabIndex = 4
@@ -391,7 +346,7 @@ Partial Class Form1
         ' ExitButton
         ' 
         ExitButton.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        ExitButton.Location = New Point(688, 659)
+        ExitButton.Location = New Point(683, 679)
         ExitButton.Name = "ExitButton"
         ExitButton.Size = New Size(102, 49)
         ExitButton.TabIndex = 5
@@ -405,7 +360,7 @@ Partial Class Form1
         GroupBox.Controls.Add(NewHDRadioCheckBox)
         GroupBox.Controls.Add(NewtiresCheckBox)
         GroupBox.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        GroupBox.Location = New Point(465, 429)
+        GroupBox.Location = New Point(465, 460)
         GroupBox.Name = "GroupBox"
         GroupBox.Size = New Size(290, 196)
         GroupBox.TabIndex = 6
@@ -458,6 +413,128 @@ Partial Class Form1
         NewtiresCheckBox.Text = "New Tires"
         NewtiresCheckBox.UseVisualStyleBackColor = True
         ' 
+        ' NoneRadiobutton
+        ' 
+        NoneRadiobutton.AutoSize = True
+        NoneRadiobutton.Location = New Point(49, 40)
+        NoneRadiobutton.Name = "NoneRadiobutton"
+        NoneRadiobutton.Size = New Size(68, 24)
+        NoneRadiobutton.TabIndex = 0
+        NoneRadiobutton.Text = "None"
+        NoneRadiobutton.UseVisualStyleBackColor = True
+        ' 
+        ' PainttouchupRadioButton
+        ' 
+        PainttouchupRadioButton.AutoSize = True
+        PainttouchupRadioButton.Checked = True
+        PainttouchupRadioButton.Location = New Point(49, 70)
+        PainttouchupRadioButton.Name = "PainttouchupRadioButton"
+        PainttouchupRadioButton.Size = New Size(136, 24)
+        PainttouchupRadioButton.TabIndex = 1
+        PainttouchupRadioButton.TabStop = True
+        PainttouchupRadioButton.Text = "Paint Touch-Up"
+        PainttouchupRadioButton.UseVisualStyleBackColor = True
+        ' 
+        ' UndercoatRadioButton
+        ' 
+        UndercoatRadioButton.AutoSize = True
+        UndercoatRadioButton.Location = New Point(49, 109)
+        UndercoatRadioButton.Name = "UndercoatRadioButton"
+        UndercoatRadioButton.Size = New Size(102, 24)
+        UndercoatRadioButton.TabIndex = 2
+        UndercoatRadioButton.Text = "Undercoat"
+        UndercoatRadioButton.UseVisualStyleBackColor = True
+        ' 
+        ' BothRadioButton
+        ' 
+        BothRadioButton.AutoSize = True
+        BothRadioButton.Location = New Point(49, 139)
+        BothRadioButton.Name = "BothRadioButton"
+        BothRadioButton.Size = New Size(62, 24)
+        BothRadioButton.TabIndex = 3
+        BothRadioButton.Text = "Both"
+        BothRadioButton.UseVisualStyleBackColor = True
+        ' 
+        ' GroupBox2
+        ' 
+        GroupBox2.Controls.Add(BothRadioButton)
+        GroupBox2.Controls.Add(UndercoatRadioButton)
+        GroupBox2.Controls.Add(PainttouchupRadioButton)
+        GroupBox2.Controls.Add(NoneRadiobutton)
+        GroupBox2.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        GroupBox2.Location = New Point(465, 273)
+        GroupBox2.Name = "GroupBox2"
+        GroupBox2.Size = New Size(290, 181)
+        GroupBox2.TabIndex = 1
+        GroupBox2.TabStop = False
+        GroupBox2.Text = "Exterior Extras"
+        ' 
+        ' MenuStrip1
+        ' 
+        MenuStrip1.ImageScalingSize = New Size(20, 20)
+        MenuStrip1.Items.AddRange(New ToolStripItem() {OptionsToolStripMenuItem, CommandsToolStripMenu})
+        MenuStrip1.Location = New Point(0, 0)
+        MenuStrip1.Name = "MenuStrip1"
+        MenuStrip1.Size = New Size(911, 28)
+        MenuStrip1.TabIndex = 7
+        MenuStrip1.Text = "MenuStrip1"
+        ' 
+        ' OptionsToolStripMenuItem
+        ' 
+        OptionsToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {CarTypeToolStripMenuItem, FontColorToolStripMenuItem, MoreToolStripMenuItem})
+        OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
+        OptionsToolStripMenuItem.Size = New Size(75, 24)
+        OptionsToolStripMenuItem.Text = "Options"
+        ' 
+        ' CarTypeToolStripMenuItem
+        ' 
+        CarTypeToolStripMenuItem.Name = "CarTypeToolStripMenuItem"
+        CarTypeToolStripMenuItem.Size = New Size(224, 26)
+        CarTypeToolStripMenuItem.Text = "Font"
+        ' 
+        ' FontColorToolStripMenuItem
+        ' 
+        FontColorToolStripMenuItem.Name = "FontColorToolStripMenuItem"
+        FontColorToolStripMenuItem.Size = New Size(224, 26)
+        FontColorToolStripMenuItem.Text = "Font-Color"
+        ' 
+        ' MoreToolStripMenuItem
+        ' 
+        MoreToolStripMenuItem.Name = "MoreToolStripMenuItem"
+        MoreToolStripMenuItem.Size = New Size(224, 26)
+        MoreToolStripMenuItem.Text = "More..."
+        ' 
+        ' CommandsToolStripMenu
+        ' 
+        CommandsToolStripMenu.DropDownItems.AddRange(New ToolStripItem() {MenuCompute, MenuTotal, MenuReset, MenuExit})
+        CommandsToolStripMenu.Name = "CommandsToolStripMenu"
+        CommandsToolStripMenu.Size = New Size(98, 24)
+        CommandsToolStripMenu.Text = "Commands"
+        ' 
+        ' MenuCompute
+        ' 
+        MenuCompute.Name = "MenuCompute"
+        MenuCompute.Size = New Size(224, 26)
+        MenuCompute.Text = "Compute"
+        ' 
+        ' MenuTotal
+        ' 
+        MenuTotal.Name = "MenuTotal"
+        MenuTotal.Size = New Size(224, 26)
+        MenuTotal.Text = "Totals"
+        ' 
+        ' MenuReset
+        ' 
+        MenuReset.Name = "MenuReset"
+        MenuReset.Size = New Size(224, 26)
+        MenuReset.Text = "Reset Form"
+        ' 
+        ' MenuExit
+        ' 
+        MenuExit.Name = "MenuExit"
+        MenuExit.Size = New Size(224, 26)
+        MenuExit.Text = "Exit Form"
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -471,21 +548,25 @@ Partial Class Form1
         Controls.Add(GroupBox3)
         Controls.Add(GroupBox2)
         Controls.Add(GroupBox1)
+        Controls.Add(MenuStrip1)
+        MainMenuStrip = MenuStrip1
         Name = "Form1"
         Text = "Form1"
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
-        GroupBox2.ResumeLayout(False)
-        GroupBox2.PerformLayout()
         GroupBox3.ResumeLayout(False)
         GroupBox3.PerformLayout()
         GroupBox.ResumeLayout(False)
         GroupBox.PerformLayout()
+        GroupBox2.ResumeLayout(False)
+        GroupBox2.PerformLayout()
+        MenuStrip1.ResumeLayout(False)
+        MenuStrip1.PerformLayout()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents txtvehiclemake As TextBox
     Friend WithEvents TxtYear As TextBox
@@ -512,14 +593,25 @@ Partial Class Form1
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents BothRadioButton As RadioButton
-    Friend WithEvents UndercoatRadioButton As RadioButton
-    Friend WithEvents PainttouchupRadioButton As RadioButton
-    Friend WithEvents NoneRadiobutton As RadioButton
     Friend WithEvents BuiltinGPSCheckBox As CheckBox
     Friend WithEvents NewHDRadioCheckBox As CheckBox
     Friend WithEvents NewtiresCheckBox As CheckBox
     Friend WithEvents WholeSaleCheckBox As CheckBox
     Friend WithEvents NewFloorMatsCheckBox As CheckBox
+    Friend WithEvents NoneRadiobutton As RadioButton
+    Friend WithEvents PainttouchupRadioButton As RadioButton
+    Friend WithEvents UndercoatRadioButton As RadioButton
+    Friend WithEvents BothRadioButton As RadioButton
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents OptionsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CarTypeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FontColorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MoreToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CommandsToolStripMenu As ToolStripMenuItem
+    Friend WithEvents MenuCompute As ToolStripMenuItem
+    Friend WithEvents MenuTotal As ToolStripMenuItem
+    Friend WithEvents MenuReset As ToolStripMenuItem
+    Friend WithEvents MenuExit As ToolStripMenuItem
 
 End Class

@@ -11,7 +11,7 @@
 
     End Sub
 
-    Private Sub ComputeButton_Click(sender As Object, e As EventArgs) Handles ComputeButton.Click
+    Private Sub ComputeButton_Click(sender As Object, e As EventArgs) Handles ComputeButton.Click, MenuCompute.Click
 
 
         Dim price As Decimal = 0
@@ -81,7 +81,7 @@
         Me.Close()
     End Sub
 
-    Private Sub ResetButton_Click(sender As Object, e As EventArgs) Handles ResetButton.Click
+    Private Sub ResetButton_Click(sender As Object, e As EventArgs) Handles ResetButton.Click, MenuReset.Click
 
 
         ' Clear input
@@ -123,6 +123,14 @@
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub ResetFormToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MenuCompute.Click
+
+    End Sub
+
+    Private Sub ExitFormToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MenuExit.Click
 
     End Sub
 End Class
