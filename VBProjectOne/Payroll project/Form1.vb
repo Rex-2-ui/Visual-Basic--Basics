@@ -25,7 +25,7 @@
         Const DISCOUNT_RATE As Decimal = 0.2D ' 20% Wholesale Discount
 
         ' 1. Get User Input (Price and Trade-in)
-        Decimal.TryParse(txtPrice.Text, price)
+
         Decimal.TryParse(txttradein.Text, tradeIn)
 
         ' 2. Calculate Wholesale Discount (if checkbox is checked)
@@ -77,7 +77,7 @@
 
 
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles ExitButton.Click, MenuExit.Click
         Me.Close()
     End Sub
 
