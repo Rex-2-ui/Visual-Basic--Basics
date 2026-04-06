@@ -63,25 +63,32 @@ Partial Class Form1
         GroupBox1.Controls.Add(TextBox1)
         GroupBox1.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         GroupBox1.ForeColor = SystemColors.MenuHighlight
-        GroupBox1.Location = New Point(24, 30)
+        GroupBox1.Location = New Point(30, 40)
+        GroupBox1.Margin = New Padding(4)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(701, 386)
+        GroupBox1.Padding = New Padding(4)
+        GroupBox1.Size = New Size(876, 482)
         GroupBox1.TabIndex = 0
         GroupBox1.TabStop = False
         GroupBox1.Text = "Textbook Sale Information"
         ' 
         ' TextBox7
         ' 
-        TextBox7.Location = New Point(261, 343)
+        TextBox7.Location = New Point(326, 429)
+        TextBox7.Margin = New Padding(4)
         TextBox7.Name = "TextBox7"
-        TextBox7.Size = New Size(125, 30)
+        TextBox7.ReadOnly = True
+        TextBox7.Size = New Size(155, 30)
         TextBox7.TabIndex = 13
+        TextBox7.TabStop = False
+        TextBox7.TextAlign = HorizontalAlignment.Right
         ' 
         ' Label7
         ' 
         Label7.AutoSize = True
         Label7.ForeColor = SystemColors.InactiveCaptionText
-        Label7.Location = New Point(50, 343)
+        Label7.Location = New Point(62, 429)
+        Label7.Margin = New Padding(4, 0, 4, 0)
         Label7.Name = "Label7"
         Label7.Size = New Size(82, 23)
         Label7.TabIndex = 12
@@ -91,7 +98,8 @@ Partial Class Form1
         ' 
         Label6.AutoSize = True
         Label6.ForeColor = SystemColors.InfoText
-        Label6.Location = New Point(51, 295)
+        Label6.Location = New Point(64, 369)
+        Label6.Margin = New Padding(4, 0, 4, 0)
         Label6.Name = "Label6"
         Label6.Size = New Size(78, 23)
         Label6.TabIndex = 11
@@ -101,7 +109,8 @@ Partial Class Form1
         ' 
         Label5.AutoSize = True
         Label5.ForeColor = SystemColors.InactiveCaptionText
-        Label5.Location = New Point(50, 245)
+        Label5.Location = New Point(62, 306)
+        Label5.Margin = New Padding(4, 0, 4, 0)
         Label5.Name = "Label5"
         Label5.Size = New Size(74, 23)
         Label5.TabIndex = 10
@@ -111,7 +120,8 @@ Partial Class Form1
         ' 
         Label4.AutoSize = True
         Label4.ForeColor = SystemColors.InfoText
-        Label4.Location = New Point(50, 198)
+        Label4.Location = New Point(62, 248)
+        Label4.Margin = New Padding(4, 0, 4, 0)
         Label4.Name = "Label4"
         Label4.Size = New Size(77, 23)
         Label4.TabIndex = 9
@@ -121,7 +131,8 @@ Partial Class Form1
         ' 
         Label3.AutoSize = True
         Label3.ForeColor = SystemColors.InfoText
-        Label3.Location = New Point(50, 154)
+        Label3.Location = New Point(62, 192)
+        Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
         Label3.Size = New Size(47, 23)
         Label3.TabIndex = 8
@@ -131,7 +142,8 @@ Partial Class Form1
         ' 
         Label2.AutoSize = True
         Label2.ForeColor = SystemColors.InfoText
-        Label2.Location = New Point(50, 106)
+        Label2.Location = New Point(62, 132)
+        Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
         Label2.Size = New Size(133, 23)
         Label2.TabIndex = 7
@@ -141,7 +153,8 @@ Partial Class Form1
         ' 
         Label1.AutoSize = True
         Label1.ForeColor = SystemColors.InactiveCaptionText
-        Label1.Location = New Point(50, 56)
+        Label1.Location = New Point(62, 70)
+        Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
         Label1.Size = New Size(86, 23)
         Label1.TabIndex = 6
@@ -149,96 +162,115 @@ Partial Class Form1
         ' 
         ' TextBox6
         ' 
-        TextBox6.Location = New Point(261, 295)
+        TextBox6.Location = New Point(326, 369)
+        TextBox6.Margin = New Padding(4)
         TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(125, 30)
+        TextBox6.ReadOnly = True
+        TextBox6.Size = New Size(155, 30)
         TextBox6.TabIndex = 5
+        TextBox6.TabStop = False
+        TextBox6.TextAlign = HorizontalAlignment.Right
         ' 
         ' TextBox5
         ' 
-        TextBox5.Location = New Point(261, 245)
+        TextBox5.Location = New Point(326, 306)
+        TextBox5.Margin = New Padding(4)
         TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(125, 30)
+        TextBox5.ReadOnly = True
+        TextBox5.Size = New Size(155, 30)
         TextBox5.TabIndex = 4
+        TextBox5.TabStop = False
+        TextBox5.TextAlign = HorizontalAlignment.Right
         ' 
         ' TextBox4
         ' 
-        TextBox4.Location = New Point(261, 198)
+        TextBox4.Location = New Point(326, 248)
+        TextBox4.Margin = New Padding(4)
         TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(125, 30)
+        TextBox4.Size = New Size(155, 30)
         TextBox4.TabIndex = 3
-        TextBox4.Text = "2"
+        TextBox4.TextAlign = HorizontalAlignment.Right
         ' 
         ' TextBox3
         ' 
-        TextBox3.Location = New Point(261, 151)
+        TextBox3.Location = New Point(326, 189)
+        TextBox3.Margin = New Padding(4)
         TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(125, 30)
+        TextBox3.Size = New Size(155, 30)
         TextBox3.TabIndex = 2
         TextBox3.Text = "$29.99"
+        TextBox3.TextAlign = HorizontalAlignment.Right
         ' 
         ' TextBox2
         ' 
-        TextBox2.Location = New Point(261, 99)
+        TextBox2.Location = New Point(326, 124)
+        TextBox2.Margin = New Padding(4)
         TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(209, 30)
+        TextBox2.Size = New Size(260, 30)
         TextBox2.TabIndex = 1
         TextBox2.Text = "0-256-07677-4"
         ' 
         ' TextBox1
         ' 
-        TextBox1.Location = New Point(261, 49)
+        TextBox1.Location = New Point(326, 61)
+        TextBox1.Margin = New Padding(4)
         TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(310, 30)
+        TextBox1.Size = New Size(386, 30)
         TextBox1.TabIndex = 0
         TextBox1.Text = "SQL Programming by Bruce Wanye"
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(234, 444)
+        Button1.Location = New Point(60, 549)
+        Button1.Margin = New Padding(4)
         Button1.Name = "Button1"
-        Button1.Size = New Size(94, 29)
+        Button1.Size = New Size(118, 36)
         Button1.TabIndex = 1
         Button1.Text = "Compute"
         Button1.UseVisualStyleBackColor = True
         ' 
         ' Button2
         ' 
-        Button2.Location = New Point(337, 444)
+        Button2.Location = New Point(189, 549)
+        Button2.Margin = New Padding(4)
         Button2.Name = "Button2"
-        Button2.Size = New Size(94, 29)
+        Button2.Size = New Size(118, 36)
         Button2.TabIndex = 2
         Button2.Text = "Reset "
         Button2.UseVisualStyleBackColor = True
         ' 
         ' Button3
         ' 
-        Button3.Location = New Point(437, 444)
+        Button3.Location = New Point(314, 549)
+        Button3.Margin = New Padding(4)
         Button3.Name = "Button3"
-        Button3.Size = New Size(94, 29)
+        Button3.Size = New Size(118, 36)
         Button3.TabIndex = 3
         Button3.Text = "Totals"
         Button3.UseVisualStyleBackColor = True
         ' 
         ' Button4
         ' 
-        Button4.Location = New Point(550, 444)
+        Button4.Location = New Point(456, 549)
+        Button4.Margin = New Padding(4)
         Button4.Name = "Button4"
-        Button4.Size = New Size(94, 29)
+        Button4.Size = New Size(118, 36)
         Button4.TabIndex = 4
         Button4.Text = "Exit"
         Button4.UseVisualStyleBackColor = True
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 508)
+        ClientSize = New Size(1000, 635)
         Controls.Add(Button4)
         Controls.Add(Button3)
         Controls.Add(Button2)
         Controls.Add(Button1)
         Controls.Add(GroupBox1)
+        Font = New Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Margin = New Padding(4)
         Name = "Form1"
         Text = "Form1"
         GroupBox1.ResumeLayout(False)
