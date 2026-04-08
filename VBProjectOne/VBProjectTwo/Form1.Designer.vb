@@ -23,7 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         GroupBox1 = New GroupBox()
-        TextBox7 = New TextBox()
+        TotalDueTextBox = New TextBox()
         Label7 = New Label()
         Label6 = New Label()
         Label5 = New Label()
@@ -31,23 +31,23 @@ Partial Class Form1
         Label3 = New Label()
         Label2 = New Label()
         Label1 = New Label()
-        TextBox6 = New TextBox()
-        TextBox5 = New TextBox()
-        TextBox4 = New TextBox()
-        TextBox3 = New TextBox()
+        SalesaTaxTextBox = New TextBox()
+        SubtotalTextBox = New TextBox()
+        QuantityTextBox = New TextBox()
+        PriceTextBox = New TextBox()
         TextBox2 = New TextBox()
         TextBox1 = New TextBox()
-        Button1 = New Button()
-        Button2 = New Button()
-        Button3 = New Button()
-        Button4 = New Button()
+        ComputeButton = New Button()
+        ResetButton = New Button()
+        TotalsButton = New Button()
+        ExitButton = New Button()
         GroupBox1.SuspendLayout()
         SuspendLayout()
         ' 
         ' GroupBox1
         ' 
         GroupBox1.BackColor = SystemColors.Control
-        GroupBox1.Controls.Add(TextBox7)
+        GroupBox1.Controls.Add(TotalDueTextBox)
         GroupBox1.Controls.Add(Label7)
         GroupBox1.Controls.Add(Label6)
         GroupBox1.Controls.Add(Label5)
@@ -55,10 +55,10 @@ Partial Class Form1
         GroupBox1.Controls.Add(Label3)
         GroupBox1.Controls.Add(Label2)
         GroupBox1.Controls.Add(Label1)
-        GroupBox1.Controls.Add(TextBox6)
-        GroupBox1.Controls.Add(TextBox5)
-        GroupBox1.Controls.Add(TextBox4)
-        GroupBox1.Controls.Add(TextBox3)
+        GroupBox1.Controls.Add(SalesaTaxTextBox)
+        GroupBox1.Controls.Add(SubtotalTextBox)
+        GroupBox1.Controls.Add(QuantityTextBox)
+        GroupBox1.Controls.Add(PriceTextBox)
         GroupBox1.Controls.Add(TextBox2)
         GroupBox1.Controls.Add(TextBox1)
         GroupBox1.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
@@ -67,21 +67,21 @@ Partial Class Form1
         GroupBox1.Margin = New Padding(4)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Padding = New Padding(4)
-        GroupBox1.Size = New Size(876, 482)
+        GroupBox1.Size = New Size(748, 477)
         GroupBox1.TabIndex = 0
         GroupBox1.TabStop = False
         GroupBox1.Text = "Textbook Sale Information"
         ' 
-        ' TextBox7
+        ' TotalDueTextBox
         ' 
-        TextBox7.Location = New Point(326, 429)
-        TextBox7.Margin = New Padding(4)
-        TextBox7.Name = "TextBox7"
-        TextBox7.ReadOnly = True
-        TextBox7.Size = New Size(155, 30)
-        TextBox7.TabIndex = 13
-        TextBox7.TabStop = False
-        TextBox7.TextAlign = HorizontalAlignment.Right
+        TotalDueTextBox.Location = New Point(326, 429)
+        TotalDueTextBox.Margin = New Padding(4)
+        TotalDueTextBox.Name = "TotalDueTextBox"
+        TotalDueTextBox.ReadOnly = True
+        TotalDueTextBox.Size = New Size(155, 30)
+        TotalDueTextBox.TabIndex = 13
+        TotalDueTextBox.TabStop = False
+        TotalDueTextBox.TextAlign = HorizontalAlignment.Right
         ' 
         ' Label7
         ' 
@@ -160,46 +160,46 @@ Partial Class Form1
         Label1.TabIndex = 6
         Label1.Text = "Book Title"
         ' 
-        ' TextBox6
+        ' SalesaTaxTextBox
         ' 
-        TextBox6.Location = New Point(326, 369)
-        TextBox6.Margin = New Padding(4)
-        TextBox6.Name = "TextBox6"
-        TextBox6.ReadOnly = True
-        TextBox6.Size = New Size(155, 30)
-        TextBox6.TabIndex = 5
-        TextBox6.TabStop = False
-        TextBox6.TextAlign = HorizontalAlignment.Right
+        SalesaTaxTextBox.Location = New Point(326, 370)
+        SalesaTaxTextBox.Margin = New Padding(4)
+        SalesaTaxTextBox.Name = "SalesaTaxTextBox"
+        SalesaTaxTextBox.ReadOnly = True
+        SalesaTaxTextBox.Size = New Size(155, 30)
+        SalesaTaxTextBox.TabIndex = 5
+        SalesaTaxTextBox.TabStop = False
+        SalesaTaxTextBox.TextAlign = HorizontalAlignment.Right
         ' 
-        ' TextBox5
+        ' SubtotalTextBox
         ' 
-        TextBox5.Location = New Point(326, 306)
-        TextBox5.Margin = New Padding(4)
-        TextBox5.Name = "TextBox5"
-        TextBox5.ReadOnly = True
-        TextBox5.Size = New Size(155, 30)
-        TextBox5.TabIndex = 4
-        TextBox5.TabStop = False
-        TextBox5.TextAlign = HorizontalAlignment.Right
+        SubtotalTextBox.Location = New Point(326, 306)
+        SubtotalTextBox.Margin = New Padding(4)
+        SubtotalTextBox.Name = "SubtotalTextBox"
+        SubtotalTextBox.ReadOnly = True
+        SubtotalTextBox.Size = New Size(155, 30)
+        SubtotalTextBox.TabIndex = 4
+        SubtotalTextBox.TabStop = False
+        SubtotalTextBox.TextAlign = HorizontalAlignment.Right
         ' 
-        ' TextBox4
+        ' QuantityTextBox
         ' 
-        TextBox4.Location = New Point(326, 248)
-        TextBox4.Margin = New Padding(4)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(155, 30)
-        TextBox4.TabIndex = 3
-        TextBox4.TextAlign = HorizontalAlignment.Right
+        QuantityTextBox.Location = New Point(326, 248)
+        QuantityTextBox.Margin = New Padding(4)
+        QuantityTextBox.Name = "QuantityTextBox"
+        QuantityTextBox.Size = New Size(155, 30)
+        QuantityTextBox.TabIndex = 3
+        QuantityTextBox.TextAlign = HorizontalAlignment.Right
         ' 
-        ' TextBox3
+        ' PriceTextBox
         ' 
-        TextBox3.Location = New Point(326, 189)
-        TextBox3.Margin = New Padding(4)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(155, 30)
-        TextBox3.TabIndex = 2
-        TextBox3.Text = "$29.99"
-        TextBox3.TextAlign = HorizontalAlignment.Right
+        PriceTextBox.Location = New Point(326, 189)
+        PriceTextBox.Margin = New Padding(4)
+        PriceTextBox.Name = "PriceTextBox"
+        PriceTextBox.Size = New Size(155, 30)
+        PriceTextBox.TabIndex = 2
+        PriceTextBox.Text = "$29.99"
+        PriceTextBox.TextAlign = HorizontalAlignment.Right
         ' 
         ' TextBox2
         ' 
@@ -219,55 +219,55 @@ Partial Class Form1
         TextBox1.TabIndex = 0
         TextBox1.Text = "SQL Programming by Bruce Wanye"
         ' 
-        ' Button1
+        ' ComputeButton
         ' 
-        Button1.Location = New Point(60, 549)
-        Button1.Margin = New Padding(4)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(118, 36)
-        Button1.TabIndex = 1
-        Button1.Text = "Compute"
-        Button1.UseVisualStyleBackColor = True
+        ComputeButton.Location = New Point(60, 549)
+        ComputeButton.Margin = New Padding(4)
+        ComputeButton.Name = "ComputeButton"
+        ComputeButton.Size = New Size(118, 36)
+        ComputeButton.TabIndex = 1
+        ComputeButton.Text = "Compute"
+        ComputeButton.UseVisualStyleBackColor = True
         ' 
-        ' Button2
+        ' ResetButton
         ' 
-        Button2.Location = New Point(189, 549)
-        Button2.Margin = New Padding(4)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(118, 36)
-        Button2.TabIndex = 2
-        Button2.Text = "Reset "
-        Button2.UseVisualStyleBackColor = True
+        ResetButton.Location = New Point(189, 549)
+        ResetButton.Margin = New Padding(4)
+        ResetButton.Name = "ResetButton"
+        ResetButton.Size = New Size(118, 36)
+        ResetButton.TabIndex = 2
+        ResetButton.Text = "Reset "
+        ResetButton.UseVisualStyleBackColor = True
         ' 
-        ' Button3
+        ' TotalsButton
         ' 
-        Button3.Location = New Point(314, 549)
-        Button3.Margin = New Padding(4)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(118, 36)
-        Button3.TabIndex = 3
-        Button3.Text = "Totals"
-        Button3.UseVisualStyleBackColor = True
+        TotalsButton.Location = New Point(314, 549)
+        TotalsButton.Margin = New Padding(4)
+        TotalsButton.Name = "TotalsButton"
+        TotalsButton.Size = New Size(118, 36)
+        TotalsButton.TabIndex = 3
+        TotalsButton.Text = "Totals"
+        TotalsButton.UseVisualStyleBackColor = True
         ' 
-        ' Button4
+        ' ExitButton
         ' 
-        Button4.Location = New Point(456, 549)
-        Button4.Margin = New Padding(4)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(118, 36)
-        Button4.TabIndex = 4
-        Button4.Text = "Exit"
-        Button4.UseVisualStyleBackColor = True
+        ExitButton.Location = New Point(456, 549)
+        ExitButton.Margin = New Padding(4)
+        ExitButton.Name = "ExitButton"
+        ExitButton.Size = New Size(118, 36)
+        ExitButton.TabIndex = 4
+        ExitButton.Text = "Exit"
+        ExitButton.UseVisualStyleBackColor = True
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1000, 635)
-        Controls.Add(Button4)
-        Controls.Add(Button3)
-        Controls.Add(Button2)
-        Controls.Add(Button1)
+        Controls.Add(ExitButton)
+        Controls.Add(TotalsButton)
+        Controls.Add(ResetButton)
+        Controls.Add(ComputeButton)
         Controls.Add(GroupBox1)
         Font = New Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Margin = New Padding(4)
@@ -279,10 +279,10 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents SalesaTaxTextBox As TextBox
+    Friend WithEvents SubtotalTextBox As TextBox
+    Friend WithEvents QuantityTextBox As TextBox
+    Friend WithEvents PriceTextBox As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label6 As Label
@@ -291,11 +291,11 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents ComputeButton As Button
+    Friend WithEvents ResetButton As Button
+    Friend WithEvents TotalsButton As Button
+    Friend WithEvents ExitButton As Button
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents TotalDueTextBox As TextBox
 
 End Class
