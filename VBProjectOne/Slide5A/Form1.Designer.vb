@@ -37,6 +37,18 @@ Partial Class Form1
         FileToolStripMenuItem = New ToolStripMenuItem()
         EmployeeToolStripMenuItem = New ToolStripMenuItem()
         DepartmeToolStripMenuItem = New ToolStripMenuItem()
+        CountToolStripMenuItem = New ToolStripMenuItem()
+        ExitToolStripMenuItem = New ToolStripMenuItem()
+        AddEmployeeToolStripMenuItem = New ToolStripMenuItem()
+        ResetEmployeeToolStripMenuItem = New ToolStripMenuItem()
+        ClearEmployeeListToolStripMenuItem = New ToolStripMenuItem()
+        DisplayToolStripMenuItem = New ToolStripMenuItem()
+        AddDepartmentToolStripMenuItem = New ToolStripMenuItem()
+        CountDeparmentToolStripMenuItem = New ToolStripMenuItem()
+        RemoveDToolStripMenuItem = New ToolStripMenuItem()
+        RemoveAtDepartmentToolStripMenuItem = New ToolStripMenuItem()
+        HelpToolStripMenuItem = New ToolStripMenuItem()
+        AboutToolStripMenuItem = New ToolStripMenuItem()
         GroupBox1.SuspendLayout()
         GroupBox2.SuspendLayout()
         MenuStrip1.SuspendLayout()
@@ -146,7 +158,7 @@ Partial Class Form1
         ' MenuStrip1
         ' 
         MenuStrip1.ImageScalingSize = New Size(20, 20)
-        MenuStrip1.Items.AddRange(New ToolStripItem() {FileToolStripMenuItem, EmployeeToolStripMenuItem, DepartmeToolStripMenuItem})
+        MenuStrip1.Items.AddRange(New ToolStripItem() {FileToolStripMenuItem, EmployeeToolStripMenuItem, DepartmeToolStripMenuItem, HelpToolStripMenuItem})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
         MenuStrip1.Size = New Size(712, 28)
@@ -155,21 +167,97 @@ Partial Class Form1
         ' 
         ' FileToolStripMenuItem
         ' 
+        FileToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {CountToolStripMenuItem, ExitToolStripMenuItem})
         FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         FileToolStripMenuItem.Size = New Size(46, 24)
         FileToolStripMenuItem.Text = "&File"
         ' 
         ' EmployeeToolStripMenuItem
         ' 
+        EmployeeToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AddEmployeeToolStripMenuItem, ResetEmployeeToolStripMenuItem, ClearEmployeeListToolStripMenuItem, DisplayToolStripMenuItem})
         EmployeeToolStripMenuItem.Name = "EmployeeToolStripMenuItem"
         EmployeeToolStripMenuItem.Size = New Size(89, 24)
         EmployeeToolStripMenuItem.Text = "&Employee"
         ' 
         ' DepartmeToolStripMenuItem
         ' 
+        DepartmeToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AddDepartmentToolStripMenuItem, CountDeparmentToolStripMenuItem, RemoveDToolStripMenuItem, RemoveAtDepartmentToolStripMenuItem})
         DepartmeToolStripMenuItem.Name = "DepartmeToolStripMenuItem"
         DepartmeToolStripMenuItem.Size = New Size(103, 24)
         DepartmeToolStripMenuItem.Text = "&Department"
+        ' 
+        ' CountToolStripMenuItem
+        ' 
+        CountToolStripMenuItem.Name = "CountToolStripMenuItem"
+        CountToolStripMenuItem.Size = New Size(224, 26)
+        CountToolStripMenuItem.Text = "&Count"
+        ' 
+        ' ExitToolStripMenuItem
+        ' 
+        ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        ExitToolStripMenuItem.Size = New Size(224, 26)
+        ExitToolStripMenuItem.Text = "E&xit"
+        ' 
+        ' AddEmployeeToolStripMenuItem
+        ' 
+        AddEmployeeToolStripMenuItem.Name = "AddEmployeeToolStripMenuItem"
+        AddEmployeeToolStripMenuItem.Size = New Size(272, 26)
+        AddEmployeeToolStripMenuItem.Text = "&Add Employee"
+        ' 
+        ' ResetEmployeeToolStripMenuItem
+        ' 
+        ResetEmployeeToolStripMenuItem.Name = "ResetEmployeeToolStripMenuItem"
+        ResetEmployeeToolStripMenuItem.Size = New Size(272, 26)
+        ResetEmployeeToolStripMenuItem.Text = "&Reset Employee"
+        ' 
+        ' ClearEmployeeListToolStripMenuItem
+        ' 
+        ClearEmployeeListToolStripMenuItem.Name = "ClearEmployeeListToolStripMenuItem"
+        ClearEmployeeListToolStripMenuItem.Size = New Size(272, 26)
+        ClearEmployeeListToolStripMenuItem.Text = "Clear Employee List"
+        ' 
+        ' DisplayToolStripMenuItem
+        ' 
+        DisplayToolStripMenuItem.Name = "DisplayToolStripMenuItem"
+        DisplayToolStripMenuItem.Size = New Size(272, 26)
+        DisplayToolStripMenuItem.Text = "Display &Selected Employee"
+        ' 
+        ' AddDepartmentToolStripMenuItem
+        ' 
+        AddDepartmentToolStripMenuItem.Name = "AddDepartmentToolStripMenuItem"
+        AddDepartmentToolStripMenuItem.Size = New Size(224, 26)
+        AddDepartmentToolStripMenuItem.Text = "&Add Department"
+        ' 
+        ' CountDeparmentToolStripMenuItem
+        ' 
+        CountDeparmentToolStripMenuItem.Name = "CountDeparmentToolStripMenuItem"
+        CountDeparmentToolStripMenuItem.Size = New Size(224, 26)
+        CountDeparmentToolStripMenuItem.Text = "&Count Department"
+        ' 
+        ' RemoveDToolStripMenuItem
+        ' 
+        RemoveDToolStripMenuItem.Name = "RemoveDToolStripMenuItem"
+        RemoveDToolStripMenuItem.Size = New Size(249, 26)
+        RemoveDToolStripMenuItem.Text = "&Remove Department"
+        ' 
+        ' RemoveAtDepartmentToolStripMenuItem
+        ' 
+        RemoveAtDepartmentToolStripMenuItem.Name = "RemoveAtDepartmentToolStripMenuItem"
+        RemoveAtDepartmentToolStripMenuItem.Size = New Size(249, 26)
+        RemoveAtDepartmentToolStripMenuItem.Text = "Remove &At Department"
+        ' 
+        ' HelpToolStripMenuItem
+        ' 
+        HelpToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AboutToolStripMenuItem})
+        HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        HelpToolStripMenuItem.Size = New Size(55, 24)
+        HelpToolStripMenuItem.Text = "&Help"
+        ' 
+        ' AboutToolStripMenuItem
+        ' 
+        AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        AboutToolStripMenuItem.Size = New Size(224, 26)
+        AboutToolStripMenuItem.Text = "&About"
         ' 
         ' Form1
         ' 
@@ -206,5 +294,17 @@ Partial Class Form1
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EmployeeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DepartmeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CountToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AddEmployeeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ResetEmployeeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ClearEmployeeListToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DisplayToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AddDepartmentToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CountDeparmentToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RemoveDToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RemoveAtDepartmentToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
 
 End Class
