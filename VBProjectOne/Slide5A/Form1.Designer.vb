@@ -23,26 +23,26 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         GroupBox1 = New GroupBox()
-        TextBox2 = New TextBox()
-        ComboBox2 = New ComboBox()
-        ComboBox1 = New ComboBox()
-        TextBox1 = New TextBox()
+        SalaryTextBox = New TextBox()
+        DepartmentComboBox = New ComboBox()
+        TitleComboBox = New ComboBox()
+        NameTextBox = New TextBox()
         Label4 = New Label()
         Label3 = New Label()
         Label2 = New Label()
         Label1 = New Label()
         GroupBox2 = New GroupBox()
-        ListBox1 = New ListBox()
+        EmployeeListBox = New ListBox()
         MenuStrip1 = New MenuStrip()
         FileToolStripMenuItem = New ToolStripMenuItem()
-        EmployeeToolStripMenuItem = New ToolStripMenuItem()
-        DepartmeToolStripMenuItem = New ToolStripMenuItem()
         CountToolStripMenuItem = New ToolStripMenuItem()
         ExitToolStripMenuItem = New ToolStripMenuItem()
+        EmployeeToolStripMenuItem = New ToolStripMenuItem()
         AddEmployeeToolStripMenuItem = New ToolStripMenuItem()
         ResetEmployeeToolStripMenuItem = New ToolStripMenuItem()
         ClearEmployeeListToolStripMenuItem = New ToolStripMenuItem()
         DisplayToolStripMenuItem = New ToolStripMenuItem()
+        DepartmeToolStripMenuItem = New ToolStripMenuItem()
         AddDepartmentToolStripMenuItem = New ToolStripMenuItem()
         CountDeparmentToolStripMenuItem = New ToolStripMenuItem()
         RemoveDToolStripMenuItem = New ToolStripMenuItem()
@@ -56,10 +56,10 @@ Partial Class Form1
         ' 
         ' GroupBox1
         ' 
-        GroupBox1.Controls.Add(TextBox2)
-        GroupBox1.Controls.Add(ComboBox2)
-        GroupBox1.Controls.Add(ComboBox1)
-        GroupBox1.Controls.Add(TextBox1)
+        GroupBox1.Controls.Add(SalaryTextBox)
+        GroupBox1.Controls.Add(DepartmentComboBox)
+        GroupBox1.Controls.Add(TitleComboBox)
+        GroupBox1.Controls.Add(NameTextBox)
         GroupBox1.Controls.Add(Label4)
         GroupBox1.Controls.Add(Label3)
         GroupBox1.Controls.Add(Label2)
@@ -71,35 +71,35 @@ Partial Class Form1
         GroupBox1.TabStop = False
         GroupBox1.Text = "New Employee Information"
         ' 
-        ' TextBox2
+        ' SalaryTextBox
         ' 
-        TextBox2.Location = New Point(197, 192)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(194, 27)
-        TextBox2.TabIndex = 7
+        SalaryTextBox.Location = New Point(197, 192)
+        SalaryTextBox.Name = "SalaryTextBox"
+        SalaryTextBox.Size = New Size(194, 27)
+        SalaryTextBox.TabIndex = 7
         ' 
-        ' ComboBox2
+        ' DepartmentComboBox
         ' 
-        ComboBox2.FormattingEnabled = True
-        ComboBox2.Location = New Point(197, 144)
-        ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(194, 28)
-        ComboBox2.TabIndex = 6
+        DepartmentComboBox.FormattingEnabled = True
+        DepartmentComboBox.Location = New Point(197, 144)
+        DepartmentComboBox.Name = "DepartmentComboBox"
+        DepartmentComboBox.Size = New Size(194, 28)
+        DepartmentComboBox.TabIndex = 6
         ' 
-        ' ComboBox1
+        ' TitleComboBox
         ' 
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(197, 95)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(194, 28)
-        ComboBox1.TabIndex = 5
+        TitleComboBox.FormattingEnabled = True
+        TitleComboBox.Location = New Point(197, 95)
+        TitleComboBox.Name = "TitleComboBox"
+        TitleComboBox.Size = New Size(194, 28)
+        TitleComboBox.TabIndex = 5
         ' 
-        ' TextBox1
+        ' NameTextBox
         ' 
-        TextBox1.Location = New Point(197, 38)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(194, 27)
-        TextBox1.TabIndex = 4
+        NameTextBox.Location = New Point(197, 38)
+        NameTextBox.Name = "NameTextBox"
+        NameTextBox.Size = New Size(194, 27)
+        NameTextBox.TabIndex = 4
         ' 
         ' Label4
         ' 
@@ -139,7 +139,7 @@ Partial Class Form1
         ' 
         ' GroupBox2
         ' 
-        GroupBox2.Controls.Add(ListBox1)
+        GroupBox2.Controls.Add(EmployeeListBox)
         GroupBox2.Location = New Point(44, 301)
         GroupBox2.Name = "GroupBox2"
         GroupBox2.Size = New Size(472, 138)
@@ -147,13 +147,13 @@ Partial Class Form1
         GroupBox2.TabStop = False
         GroupBox2.Text = "Selected Employee"
         ' 
-        ' ListBox1
+        ' EmployeeListBox
         ' 
-        ListBox1.FormattingEnabled = True
-        ListBox1.Location = New Point(30, 28)
-        ListBox1.Name = "ListBox1"
-        ListBox1.Size = New Size(361, 104)
-        ListBox1.TabIndex = 0
+        EmployeeListBox.FormattingEnabled = True
+        EmployeeListBox.Location = New Point(30, 28)
+        EmployeeListBox.Name = "EmployeeListBox"
+        EmployeeListBox.Size = New Size(361, 104)
+        EmployeeListBox.TabIndex = 0
         ' 
         ' MenuStrip1
         ' 
@@ -172,31 +172,24 @@ Partial Class Form1
         FileToolStripMenuItem.Size = New Size(46, 24)
         FileToolStripMenuItem.Text = "&File"
         ' 
+        ' CountToolStripMenuItem
+        ' 
+        CountToolStripMenuItem.Name = "CountToolStripMenuItem"
+        CountToolStripMenuItem.Size = New Size(131, 26)
+        CountToolStripMenuItem.Text = "&Count"
+        ' 
+        ' ExitToolStripMenuItem
+        ' 
+        ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        ExitToolStripMenuItem.Size = New Size(131, 26)
+        ExitToolStripMenuItem.Text = "E&xit"
+        ' 
         ' EmployeeToolStripMenuItem
         ' 
         EmployeeToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AddEmployeeToolStripMenuItem, ResetEmployeeToolStripMenuItem, ClearEmployeeListToolStripMenuItem, DisplayToolStripMenuItem})
         EmployeeToolStripMenuItem.Name = "EmployeeToolStripMenuItem"
         EmployeeToolStripMenuItem.Size = New Size(89, 24)
         EmployeeToolStripMenuItem.Text = "&Employee"
-        ' 
-        ' DepartmeToolStripMenuItem
-        ' 
-        DepartmeToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AddDepartmentToolStripMenuItem, CountDeparmentToolStripMenuItem, RemoveDToolStripMenuItem, RemoveAtDepartmentToolStripMenuItem})
-        DepartmeToolStripMenuItem.Name = "DepartmeToolStripMenuItem"
-        DepartmeToolStripMenuItem.Size = New Size(103, 24)
-        DepartmeToolStripMenuItem.Text = "&Department"
-        ' 
-        ' CountToolStripMenuItem
-        ' 
-        CountToolStripMenuItem.Name = "CountToolStripMenuItem"
-        CountToolStripMenuItem.Size = New Size(224, 26)
-        CountToolStripMenuItem.Text = "&Count"
-        ' 
-        ' ExitToolStripMenuItem
-        ' 
-        ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        ExitToolStripMenuItem.Size = New Size(224, 26)
-        ExitToolStripMenuItem.Text = "E&xit"
         ' 
         ' AddEmployeeToolStripMenuItem
         ' 
@@ -222,16 +215,23 @@ Partial Class Form1
         DisplayToolStripMenuItem.Size = New Size(272, 26)
         DisplayToolStripMenuItem.Text = "Display &Selected Employee"
         ' 
+        ' DepartmeToolStripMenuItem
+        ' 
+        DepartmeToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AddDepartmentToolStripMenuItem, CountDeparmentToolStripMenuItem, RemoveDToolStripMenuItem, RemoveAtDepartmentToolStripMenuItem})
+        DepartmeToolStripMenuItem.Name = "DepartmeToolStripMenuItem"
+        DepartmeToolStripMenuItem.Size = New Size(103, 24)
+        DepartmeToolStripMenuItem.Text = "&Department"
+        ' 
         ' AddDepartmentToolStripMenuItem
         ' 
         AddDepartmentToolStripMenuItem.Name = "AddDepartmentToolStripMenuItem"
-        AddDepartmentToolStripMenuItem.Size = New Size(224, 26)
+        AddDepartmentToolStripMenuItem.Size = New Size(249, 26)
         AddDepartmentToolStripMenuItem.Text = "&Add Department"
         ' 
         ' CountDeparmentToolStripMenuItem
         ' 
         CountDeparmentToolStripMenuItem.Name = "CountDeparmentToolStripMenuItem"
-        CountDeparmentToolStripMenuItem.Size = New Size(224, 26)
+        CountDeparmentToolStripMenuItem.Size = New Size(249, 26)
         CountDeparmentToolStripMenuItem.Text = "&Count Department"
         ' 
         ' RemoveDToolStripMenuItem
@@ -256,7 +256,7 @@ Partial Class Form1
         ' AboutToolStripMenuItem
         ' 
         AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        AboutToolStripMenuItem.Size = New Size(224, 26)
+        AboutToolStripMenuItem.Size = New Size(133, 26)
         AboutToolStripMenuItem.Text = "&About"
         ' 
         ' Form1
@@ -285,11 +285,11 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents SalaryTextBox As TextBox
+    Friend WithEvents DepartmentComboBox As ComboBox
+    Friend WithEvents TitleComboBox As ComboBox
+    Friend WithEvents NameTextBox As TextBox
+    Friend WithEvents EmployeeListBox As ListBox
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EmployeeToolStripMenuItem As ToolStripMenuItem
