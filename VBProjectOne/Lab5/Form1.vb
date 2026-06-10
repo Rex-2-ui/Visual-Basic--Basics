@@ -4,23 +4,11 @@
     ' Form Load: initialize flavors
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Coffee flavors
-        CoffeeComboBox.Items.AddRange(New String() {
-        "Espresso Roast",
-        "Jamaica Blue Mountain",
-        "Kona Blend",
-        "Chocolate Almond",
-        "Vanilla Nut"
-    })
+
         CoffeeComboBox.Sorted = True
 
         ' Syrup flavors
-        SyrupListBox.Items.AddRange(New String() {
-        "(None)",
-        "Chocolate",
-        "Hazelnut",
-        "Irish Cream",
-        "Orange"
-    })
+
         SyrupListBox.Sorted = True
     End Sub
 
@@ -53,7 +41,7 @@
     End Sub
 
     ' === File Menu ===
-    Private Sub PrintAllFlavorsPrinterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintAllFlavorsPrinterToolStripMenuItem.Click
+    Private Sub PrintAllFlavorsPrinterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectedPrinterToolStripMenuItem.Click
         Dim output As String = "Coffee Flavors:" & vbCrLf
         For Each flavor As String In CoffeeComboBox.Items
             output &= flavor & vbCrLf
@@ -79,6 +67,9 @@
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
         Dim aboutForm As New AboutForm()
         aboutForm.ShowDialog()
+
+
+
     End Sub
 
 End Class

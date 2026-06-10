@@ -34,7 +34,7 @@ Partial Class Form1
         PrinterToolStripMenuItem = New ToolStripMenuItem()
         PrintPreviewToolStripMenuItem = New ToolStripMenuItem()
         PrintSelectedPrinterToolStripMenuItem = New ToolStripMenuItem()
-        PrinterToolStripMenuItem1 = New ToolStripMenuItem()
+        SelectedPrinterToolStripMenuItem = New ToolStripMenuItem()
         PrintPreviewToolStripMenuItem1 = New ToolStripMenuItem()
         ToolStripSeparator1 = New ToolStripSeparator()
         ExitToolStripMenuItem = New ToolStripMenuItem()
@@ -137,27 +137,27 @@ Partial Class Form1
         ' PrinterToolStripMenuItem
         ' 
         PrinterToolStripMenuItem.Name = "PrinterToolStripMenuItem"
-        PrinterToolStripMenuItem.Size = New Size(224, 26)
+        PrinterToolStripMenuItem.Size = New Size(177, 26)
         PrinterToolStripMenuItem.Text = "Printer"
         ' 
         ' PrintPreviewToolStripMenuItem
         ' 
         PrintPreviewToolStripMenuItem.Name = "PrintPreviewToolStripMenuItem"
-        PrintPreviewToolStripMenuItem.Size = New Size(224, 26)
+        PrintPreviewToolStripMenuItem.Size = New Size(177, 26)
         PrintPreviewToolStripMenuItem.Text = "Print Preview"
         ' 
         ' PrintSelectedPrinterToolStripMenuItem
         ' 
-        PrintSelectedPrinterToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {PrinterToolStripMenuItem1, PrintPreviewToolStripMenuItem1})
+        PrintSelectedPrinterToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {SelectedPrinterToolStripMenuItem, PrintPreviewToolStripMenuItem1})
         PrintSelectedPrinterToolStripMenuItem.Name = "PrintSelectedPrinterToolStripMenuItem"
         PrintSelectedPrinterToolStripMenuItem.Size = New Size(233, 26)
         PrintSelectedPrinterToolStripMenuItem.Text = "Print Selected Flavors"
         ' 
-        ' PrinterToolStripMenuItem1
+        ' SelectedPrinterToolStripMenuItem
         ' 
-        PrinterToolStripMenuItem1.Name = "PrinterToolStripMenuItem1"
-        PrinterToolStripMenuItem1.Size = New Size(224, 26)
-        PrinterToolStripMenuItem1.Text = "Printer "
+        SelectedPrinterToolStripMenuItem.Name = "SelectedPrinterToolStripMenuItem"
+        SelectedPrinterToolStripMenuItem.Size = New Size(224, 26)
+        SelectedPrinterToolStripMenuItem.Text = "Printer "
         ' 
         ' PrintPreviewToolStripMenuItem1
         ' 
@@ -217,7 +217,7 @@ Partial Class Form1
         ' AboutToolStripMenuItem
         ' 
         AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        AboutToolStripMenuItem.Size = New Size(133, 26)
+        AboutToolStripMenuItem.Size = New Size(224, 26)
         AboutToolStripMenuItem.Text = "About"
         ' 
         ' Form1
@@ -253,7 +253,7 @@ Partial Class Form1
     Friend WithEvents PrintSelectedPrinterToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents PrinterToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents SelectedPrinterToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PrintPreviewToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
