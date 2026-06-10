@@ -1,13 +1,12 @@
 ﻿Public Class Form1
 
 
-    ' Form Load: initialize flavors
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Coffee flavors
+
 
         CoffeeComboBox.Sorted = True
 
-        ' Syrup flavors
+
 
         SyrupListBox.Sorted = True
     End Sub
@@ -40,30 +39,19 @@
         MessageBox.Show("Total coffee flavors: " & CoffeeComboBox.Items.Count.ToString(), "Coffee Count")
     End Sub
 
-    ' === File Menu ===
-    Private Sub PrintAllFlavorsPrinterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectedPrinterToolStripMenuItem.Click
-        Dim output As String = "Coffee Flavors:" & vbCrLf
-        For Each flavor As String In CoffeeComboBox.Items
-            output &= flavor & vbCrLf
-        Next
-        output &= vbCrLf & "Syrup Flavors:" & vbCrLf
-        For Each syrup As String In SyrupListBox.Items
-            output &= syrup & vbCrLf
-        Next
-        MessageBox.Show(output, "Print All Flavors (Printer)")
-    End Sub
 
-    Private Sub PrintSelectedPrinterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintSelectedPrinterToolStripMenuItem.Click
+
+
+    Private Sub PrintSelectedFlavorPrintPreviewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintSelectedFlavorsPrintPreviewToolStripMenuItem1.Click
         Dim coffee As String = If(CoffeeComboBox.SelectedItem, "(None)").ToString()
         Dim syrup As String = If(SyrupListBox.SelectedItem, "(None)").ToString()
-        MessageBox.Show("Selected Coffee: " & coffee & vbCrLf & "Selected Syrup: " & syrup, "Print Selected (Printer)")
+        MessageBox.Show("Selected Coffee: " & coffee & vbCrLf & "Selected Syrup: " & syrup, "Print Selected ")
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         Me.Close()
     End Sub
 
-    ' === Help Menu ===
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
         Dim aboutForm As New AboutForm()
         aboutForm.ShowDialog()
@@ -71,5 +59,20 @@
 
 
     End Sub
+    Private Sub PrintAllFlavorsPrintPreviwToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintAllFlavorsPrintPreviewToolStripMenuItem.Click
+        Dim output As String = "Coffee Flavors:" & vbCrLf
+        For Each flavor As String In CoffeeComboBox.Items
+            output &= flavor & vbCrLf
+        Next
+
+        output &= vbCrLf & "Syrup Flavors:" & vbCrLf
+        For Each syrup As String In SyrupListBox.Items
+            output &= syrup & vbCrLf
+        Next
+
+        MessageBox.Show(output, "All Flavors")
+    End Sub
+
+
 
 End Class
