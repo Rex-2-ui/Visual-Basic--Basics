@@ -24,20 +24,29 @@ Partial Class Form1
     Private Sub InitializeComponent()
         MenuStrip1 = New MenuStrip()
         FileToolStripMenuItem = New ToolStripMenuItem()
+        ExitToolStripMenuItem = New ToolStripMenuItem()
         InventoryToolStripMenuItem = New ToolStripMenuItem()
+        AddToItemListingToolStripMenuItem = New ToolStripMenuItem()
+        ClearItemListingToolStripMenuItem = New ToolStripMenuItem()
+        CountItemListingToolStripMenuItem = New ToolStripMenuItem()
+        AddItemToComboBoxToolStripMenuItem = New ToolStripMenuItem()
+        DeleteComboBoxItemToolStripMenuItem = New ToolStripMenuItem()
         ColorsAndFontsToolStripMenuItem = New ToolStripMenuItem()
+        SetBackgroundColorToolStripMenuItem = New ToolStripMenuItem()
+        SetFontToolStripMenuItem = New ToolStripMenuItem()
         HelpToolStripMenuItem = New ToolStripMenuItem()
+        AboutToolStripMenuItem = New ToolStripMenuItem()
         GroupBox1 = New GroupBox()
-        Label1 = New Label()
-        Label2 = New Label()
+        SelectItemComboBox = New ComboBox()
+        QtyOfItemTextBox = New TextBox()
+        WholeSaleTextBox = New TextBox()
         Label3 = New Label()
+        Label2 = New Label()
+        Label1 = New Label()
         Label4 = New Label()
-        TextBox1 = New TextBox()
-        TextBox2 = New TextBox()
-        ListBox1 = New ListBox()
+        InventoryItemListBox = New ListBox()
         Label5 = New Label()
-        TextBox3 = New TextBox()
-        ComboBox2 = New ComboBox()
+        TotalValueTextBox = New TextBox()
         MenuStrip1.SuspendLayout()
         GroupBox1.SuspendLayout()
         SuspendLayout()
@@ -56,33 +65,96 @@ Partial Class Form1
         ' 
         ' FileToolStripMenuItem
         ' 
+        FileToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ExitToolStripMenuItem})
         FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         FileToolStripMenuItem.Size = New Size(46, 24)
         FileToolStripMenuItem.Text = "&File"
         ' 
+        ' ExitToolStripMenuItem
+        ' 
+        ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        ExitToolStripMenuItem.Size = New Size(224, 26)
+        ExitToolStripMenuItem.Text = " E&xit"
+        ' 
         ' InventoryToolStripMenuItem
         ' 
+        InventoryToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AddToItemListingToolStripMenuItem, ClearItemListingToolStripMenuItem, CountItemListingToolStripMenuItem, AddItemToComboBoxToolStripMenuItem, DeleteComboBoxItemToolStripMenuItem})
         InventoryToolStripMenuItem.Name = "InventoryToolStripMenuItem"
         InventoryToolStripMenuItem.Size = New Size(84, 24)
         InventoryToolStripMenuItem.Text = "&Inventory"
         ' 
+        ' AddToItemListingToolStripMenuItem
+        ' 
+        AddToItemListingToolStripMenuItem.Name = "AddToItemListingToolStripMenuItem"
+        AddToItemListingToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.A
+        AddToItemListingToolStripMenuItem.Size = New Size(315, 26)
+        AddToItemListingToolStripMenuItem.Text = "&Add to Item Listing"
+        ' 
+        ' ClearItemListingToolStripMenuItem
+        ' 
+        ClearItemListingToolStripMenuItem.Name = "ClearItemListingToolStripMenuItem"
+        ClearItemListingToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.C
+        ClearItemListingToolStripMenuItem.Size = New Size(315, 26)
+        ClearItemListingToolStripMenuItem.Text = "&Clear Item Listing"
+        ' 
+        ' CountItemListingToolStripMenuItem
+        ' 
+        CountItemListingToolStripMenuItem.Name = "CountItemListingToolStripMenuItem"
+        CountItemListingToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.O
+        CountItemListingToolStripMenuItem.Size = New Size(315, 26)
+        CountItemListingToolStripMenuItem.Text = "C&ount Item Listing "
+        ' 
+        ' AddItemToComboBoxToolStripMenuItem
+        ' 
+        AddItemToComboBoxToolStripMenuItem.Name = "AddItemToComboBoxToolStripMenuItem"
+        AddItemToComboBoxToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.M
+        AddItemToComboBoxToolStripMenuItem.Size = New Size(315, 26)
+        AddItemToComboBoxToolStripMenuItem.Text = "A&dd Item To Combo Box "
+        ' 
+        ' DeleteComboBoxItemToolStripMenuItem
+        ' 
+        DeleteComboBoxItemToolStripMenuItem.Name = "DeleteComboBoxItemToolStripMenuItem"
+        DeleteComboBoxItemToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.D
+        DeleteComboBoxItemToolStripMenuItem.Size = New Size(315, 26)
+        DeleteComboBoxItemToolStripMenuItem.Text = "&Delete Combo Box Item "
+        ' 
         ' ColorsAndFontsToolStripMenuItem
         ' 
+        ColorsAndFontsToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {SetBackgroundColorToolStripMenuItem, SetFontToolStripMenuItem})
         ColorsAndFontsToolStripMenuItem.Name = "ColorsAndFontsToolStripMenuItem"
         ColorsAndFontsToolStripMenuItem.Size = New Size(133, 24)
         ColorsAndFontsToolStripMenuItem.Text = "&Colors and Fonts"
         ' 
+        ' SetBackgroundColorToolStripMenuItem
+        ' 
+        SetBackgroundColorToolStripMenuItem.Name = "SetBackgroundColorToolStripMenuItem"
+        SetBackgroundColorToolStripMenuItem.Size = New Size(236, 26)
+        SetBackgroundColorToolStripMenuItem.Text = "Set &Background Color"
+        ' 
+        ' SetFontToolStripMenuItem
+        ' 
+        SetFontToolStripMenuItem.Name = "SetFontToolStripMenuItem"
+        SetFontToolStripMenuItem.Size = New Size(236, 26)
+        SetFontToolStripMenuItem.Text = "Set &Font"
+        ' 
         ' HelpToolStripMenuItem
         ' 
+        HelpToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AboutToolStripMenuItem})
         HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         HelpToolStripMenuItem.Size = New Size(55, 24)
         HelpToolStripMenuItem.Text = "&Help"
         ' 
+        ' AboutToolStripMenuItem
+        ' 
+        AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        AboutToolStripMenuItem.Size = New Size(133, 26)
+        AboutToolStripMenuItem.Text = "&About"
+        ' 
         ' GroupBox1
         ' 
-        GroupBox1.Controls.Add(ComboBox2)
-        GroupBox1.Controls.Add(TextBox2)
-        GroupBox1.Controls.Add(TextBox1)
+        GroupBox1.Controls.Add(SelectItemComboBox)
+        GroupBox1.Controls.Add(QtyOfItemTextBox)
+        GroupBox1.Controls.Add(WholeSaleTextBox)
         GroupBox1.Controls.Add(Label3)
         GroupBox1.Controls.Add(Label2)
         GroupBox1.Controls.Add(Label1)
@@ -96,25 +168,32 @@ Partial Class Form1
         GroupBox1.TabStop = False
         GroupBox1.Text = "Inventory Data"
         ' 
-        ' Label1
+        ' SelectItemComboBox
         ' 
-        Label1.AutoSize = True
-        Label1.ForeColor = Color.Black
-        Label1.Location = New Point(37, 40)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(95, 23)
-        Label1.TabIndex = 0
-        Label1.Text = "Select Item"
+        SelectItemComboBox.FormattingEnabled = True
+        SelectItemComboBox.Items.AddRange(New Object() {"TaylorMade R7 Driver RH 10-degree", "TaylorMade R7 Driver LH 10-degree", "TaylorMade R7 Driver RH 9-degree", "Titleist 907D2 Driver RH 9.5-degree", "Titleist 907D2 Driver RH 10.5-degree", "King Cobra HS9 X Driver RH 9-degree", "King Cobra HS9 X Driver LH 9-degree", "Adams Redline RPM Driver RH 10-degree"})
+        SelectItemComboBox.Location = New Point(244, 39)
+        SelectItemComboBox.Name = "SelectItemComboBox"
+        SelectItemComboBox.Size = New Size(388, 31)
+        SelectItemComboBox.TabIndex = 0
         ' 
-        ' Label2
+        ' QtyOfItemTextBox
         ' 
-        Label2.AutoSize = True
-        Label2.ForeColor = Color.Black
-        Label2.Location = New Point(35, 96)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(131, 23)
-        Label2.TabIndex = 1
-        Label2.Text = "Wholesale Cost:"
+        QtyOfItemTextBox.Location = New Point(248, 147)
+        QtyOfItemTextBox.Name = "QtyOfItemTextBox"
+        QtyOfItemTextBox.Size = New Size(125, 30)
+        QtyOfItemTextBox.TabIndex = 4
+        QtyOfItemTextBox.Text = "1"
+        QtyOfItemTextBox.TextAlign = HorizontalAlignment.Right
+        ' 
+        ' WholeSaleTextBox
+        ' 
+        WholeSaleTextBox.Location = New Point(248, 89)
+        WholeSaleTextBox.Name = "WholeSaleTextBox"
+        WholeSaleTextBox.Size = New Size(125, 30)
+        WholeSaleTextBox.TabIndex = 3
+        WholeSaleTextBox.Text = "349.95"
+        WholeSaleTextBox.TextAlign = HorizontalAlignment.Right
         ' 
         ' Label3
         ' 
@@ -126,6 +205,26 @@ Partial Class Form1
         Label3.TabIndex = 2
         Label3.Text = "Quantity of Item:"
         ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.ForeColor = Color.Black
+        Label2.Location = New Point(35, 96)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(131, 23)
+        Label2.TabIndex = 1
+        Label2.Text = "Wholesale Cost:"
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.ForeColor = Color.Black
+        Label1.Location = New Point(37, 40)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(95, 23)
+        Label1.TabIndex = 0
+        Label1.Text = "Select Item"
+        ' 
         ' Label4
         ' 
         Label4.AutoSize = True
@@ -136,31 +235,13 @@ Partial Class Form1
         Label4.TabIndex = 3
         Label4.Text = "Inentory Item Listing:"
         ' 
-        ' TextBox1
+        ' InventoryItemListBox
         ' 
-        TextBox1.Location = New Point(248, 89)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(125, 30)
-        TextBox1.TabIndex = 3
-        TextBox1.Text = "349.95"
-        TextBox1.TextAlign = HorizontalAlignment.Right
-        ' 
-        ' TextBox2
-        ' 
-        TextBox2.Location = New Point(248, 147)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(125, 30)
-        TextBox2.TabIndex = 4
-        TextBox2.Text = "1"
-        TextBox2.TextAlign = HorizontalAlignment.Right
-        ' 
-        ' ListBox1
-        ' 
-        ListBox1.FormattingEnabled = True
-        ListBox1.Location = New Point(74, 328)
-        ListBox1.Name = "ListBox1"
-        ListBox1.Size = New Size(651, 119)
-        ListBox1.TabIndex = 4
+        InventoryItemListBox.FormattingEnabled = True
+        InventoryItemListBox.Location = New Point(74, 328)
+        InventoryItemListBox.Name = "InventoryItemListBox"
+        InventoryItemListBox.Size = New Size(651, 119)
+        InventoryItemListBox.TabIndex = 4
         ' 
         ' Label5
         ' 
@@ -172,23 +253,15 @@ Partial Class Form1
         Label5.TabIndex = 5
         Label5.Text = "Total Inventory Value:"
         ' 
-        ' TextBox3
+        ' TotalValueTextBox
         ' 
-        TextBox3.Location = New Point(581, 475)
-        TextBox3.Name = "TextBox3"
-        TextBox3.ReadOnly = True
-        TextBox3.Size = New Size(125, 30)
-        TextBox3.TabIndex = 6
-        TextBox3.Text = "1"
-        TextBox3.TextAlign = HorizontalAlignment.Right
-        ' 
-        ' ComboBox2
-        ' 
-        ComboBox2.FormattingEnabled = True
-        ComboBox2.Location = New Point(244, 39)
-        ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(388, 31)
-        ComboBox2.TabIndex = 5
+        TotalValueTextBox.Location = New Point(581, 475)
+        TotalValueTextBox.Name = "TotalValueTextBox"
+        TotalValueTextBox.ReadOnly = True
+        TotalValueTextBox.Size = New Size(125, 30)
+        TotalValueTextBox.TabIndex = 6
+        TotalValueTextBox.TabStop = False
+        TotalValueTextBox.TextAlign = HorizontalAlignment.Right
         ' 
         ' Form1
         ' 
@@ -196,9 +269,9 @@ Partial Class Form1
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.Info
         ClientSize = New Size(925, 530)
-        Controls.Add(TextBox3)
+        Controls.Add(TotalValueTextBox)
         Controls.Add(Label5)
-        Controls.Add(ListBox1)
+        Controls.Add(InventoryItemListBox)
         Controls.Add(Label4)
         Controls.Add(GroupBox1)
         Controls.Add(MenuStrip1)
@@ -206,6 +279,7 @@ Partial Class Form1
         MainMenuStrip = MenuStrip1
         Margin = New Padding(4, 3, 4, 3)
         Name = "Form1"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Form1"
         MenuStrip1.ResumeLayout(False)
         MenuStrip1.PerformLayout()
@@ -221,15 +295,24 @@ Partial Class Form1
     Friend WithEvents ColorsAndFontsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents QtyOfItemTextBox As TextBox
+    Friend WithEvents WholeSaleTextBox As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents InventoryItemListBox As ListBox
+    Friend WithEvents SelectItemComboBox As ComboBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TotalValueTextBox As TextBox
+    Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AddToItemListingToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ClearItemListingToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CountItemListingToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AddItemToComboBoxToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DeleteComboBoxItemToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SetBackgroundColorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SetFontToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
 
 End Class
