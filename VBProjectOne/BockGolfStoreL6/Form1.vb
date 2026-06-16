@@ -10,11 +10,6 @@ Public Class Form1
         SelectItemComboBox.Focus()
     End Sub
 
-    Private Sub ClearItemListingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearItemListingToolStripMenuItem.Click
-
-    End Sub
-
-
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         Dim result As DialogResult = MessageBox.Show("Are you sure you want to exit?",
                                                  "Exit Application", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -78,6 +73,43 @@ Public Class Form1
 
         Return True
     End Function
+
+    Private Sub ClearItemListingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearItemListingToolStripMenuItem.Click
+        ' Ask user to confirm clearing
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to clear the item listing?",
+                                                 "Confirm Clear", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ' Default = No
+
+        If result = DialogResult.Yes Then
+            ' Unselect ComboBox item
+            SelectItemComboBox.SelectedIndex = -1
+            SelectItemComboBox.Text = String.Empty
+
+            ' Clear TextBoxes
+            WholeSaleTextBox.Clear()
+            QtyOfItemTextBox.Clear()
+
+            ' Clear ListBox
+            InventoryItemListBox.Items.Clear()
+
+            ' Reset total inventory value
+            totalInventoryValue = 0D
+            TotalValueTextBox.Text = totalInventoryValue.ToString("C")
+
+            ' Reset focus
+            SelectItemComboBox.Focus()
+        End If
+    End Sub
+    Private Sub CountItemsInListingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CountItemsListingToolStripMenuItem.Click
+        ' Count how many items are in the ComboBox
+        Dim itemCount As Integer = SelectItemComboBox.Items.Count
+
+        ' Show message box with appropriate title, icon, and buttons
+        MessageBox.Show("There are " & itemCount.ToString() & " different inventory items available.",
+                    "Inventory Item Count",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information)
+    End Sub
+
 
 
 End Class

@@ -28,7 +28,7 @@ Partial Class Form1
         InventoryToolStripMenuItem = New ToolStripMenuItem()
         AddToItemListingToolStripMenuItem = New ToolStripMenuItem()
         ClearItemListingToolStripMenuItem = New ToolStripMenuItem()
-        CountItemListingToolStripMenuItem = New ToolStripMenuItem()
+        CountItemsListingToolStripMenuItem = New ToolStripMenuItem()
         AddItemToComboBoxToolStripMenuItem = New ToolStripMenuItem()
         DeleteComboBoxItemToolStripMenuItem = New ToolStripMenuItem()
         ColorsAndFontsToolStripMenuItem = New ToolStripMenuItem()
@@ -73,12 +73,12 @@ Partial Class Form1
         ' ExitToolStripMenuItem
         ' 
         ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        ExitToolStripMenuItem.Size = New Size(224, 26)
+        ExitToolStripMenuItem.Size = New Size(120, 26)
         ExitToolStripMenuItem.Text = " E&xit"
         ' 
         ' InventoryToolStripMenuItem
         ' 
-        InventoryToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AddToItemListingToolStripMenuItem, ClearItemListingToolStripMenuItem, CountItemListingToolStripMenuItem, AddItemToComboBoxToolStripMenuItem, DeleteComboBoxItemToolStripMenuItem})
+        InventoryToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AddToItemListingToolStripMenuItem, ClearItemListingToolStripMenuItem, CountItemsListingToolStripMenuItem, AddItemToComboBoxToolStripMenuItem, DeleteComboBoxItemToolStripMenuItem})
         InventoryToolStripMenuItem.Name = "InventoryToolStripMenuItem"
         InventoryToolStripMenuItem.Size = New Size(84, 24)
         InventoryToolStripMenuItem.Text = "&Inventory"
@@ -97,12 +97,12 @@ Partial Class Form1
         ClearItemListingToolStripMenuItem.Size = New Size(315, 26)
         ClearItemListingToolStripMenuItem.Text = "&Clear Item Listing"
         ' 
-        ' CountItemListingToolStripMenuItem
+        ' CountItemsListingToolStripMenuItem
         ' 
-        CountItemListingToolStripMenuItem.Name = "CountItemListingToolStripMenuItem"
-        CountItemListingToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.O
-        CountItemListingToolStripMenuItem.Size = New Size(315, 26)
-        CountItemListingToolStripMenuItem.Text = "C&ount Item Listing "
+        CountItemsListingToolStripMenuItem.Name = "CountItemsListingToolStripMenuItem"
+        CountItemsListingToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.O
+        CountItemsListingToolStripMenuItem.Size = New Size(315, 26)
+        CountItemsListingToolStripMenuItem.Text = "C&ount Item Listing "
         ' 
         ' AddItemToComboBoxToolStripMenuItem
         ' 
@@ -308,7 +308,7 @@ Partial Class Form1
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AddToItemListingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ClearItemListingToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CountItemListingToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CountItemsListingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AddItemToComboBoxToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DeleteComboBoxItemToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SetBackgroundColorToolStripMenuItem As ToolStripMenuItem
