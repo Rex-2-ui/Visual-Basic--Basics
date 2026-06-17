@@ -6,9 +6,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        SelectItemComboBox.Focus()
-    End Sub
+
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         Dim result As DialogResult = MessageBox.Show("Are you sure you want to exit?",
@@ -109,7 +107,99 @@ Public Class Form1
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information)
     End Sub
+    Private Sub AddItemToComboBoxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddItemToComboBoxToolStripMenuItem.Click
+        Dim newItem As String = SelectItemComboBox.Text.Trim()
 
+        ' Rule #1: No blank entries
+        If String.IsNullOrEmpty(newItem) Then
+            MessageBox.Show("Please type an item name before adding.", "Invalid Entry", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
+
+        ' Rule #2: No duplicates (case-insensitive)
+        For Each existingItem As String In SelectItemComboBox.Items
+            If String.Equals(existingItem, newItem, StringComparison.OrdinalIgnoreCase) Then
+                MessageBox.Show("This item already exists in the list.", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return
+            End If
+        Next
+
+        ' Rule #3: Add item and keep sorted order
+        SelectItemComboBox.Items.Add(newItem)
+        SelectItemComboBox.Sorted = True
+
+        ' Clear the ComboBox text and reset focus for next entry
+        SelectItemComboBox.Text = String.Empty
+        SelectItemComboBox.Focus()
+    End Sub
+
+    Private Sub DeleteComboBoxItemToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteComboBoxItemToolStripMenuItem.Click
+        ' Check if an item is selected
+        If SelectItemComboBox.SelectedIndex = -1 OrElse String.IsNullOrWhiteSpace(SelectItemComboBox.Text) Then
+            MessageBox.Show("Please select an item to delete.", "Delete Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
+
+        ' Delete the selected item
+        SelectItemComboBox.Items.RemoveAt(SelectItemComboBox.SelectedIndex)
+
+        ' Clear the ComboBox text
+        SelectItemComboBox.Text = String.Empty
+    End Sub
+
+    Private Sub SetFormBackgroundColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SetBackgroundColorToolStripMenuItem.Click
+        Dim colorDialog As New ColorDialog()
+
+        If colorDialog.ShowDialog() = DialogResult.OK Then
+            Me.BackColor = colorDialog.Color
+        End If
+    End Sub
+    Private Sub SetFormFontToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SetFontToolStripMenuItem.Click
+        Dim fontDialog As New FontDialog()
+
+        If fontDialog.ShowDialog() = DialogResult.OK Then
+            ' Apply font to the form itself
+            Me.Font = fontDialog.Font
+
+            ' Apply font to all controls on the form
+            For Each ctrl As Control In Me.Controls
+                ctrl.Font = fontDialog.Font
+            Next
+
+            ' Apply font to the MenuStrip explicitly
+            MenuStrip1.Font = fontDialog.Font
+        End If
+    End Sub
+
+    Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
+        Dim aboutMessage As String = "Ali" & Environment.NewLine & DateTime.Now.ToString()
+        MessageBox.Show(aboutMessage, "About", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
+    ' Declare the ContextMenuStrip at the form level
+    Private contextMenu As New ContextMenuStrip()
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        SelectItemComboBox.Focus()
+        ' Build the context menu
+        Dim colorItem As New ToolStripMenuItem("Color")
+        Dim fontItem As New ToolStripMenuItem("Font")
+        Dim exitItem As New ToolStripMenuItem("Exit")
+
+        ' Add items with separator
+        contextMenu.Items.Add(colorItem)
+        contextMenu.Items.Add(fontItem)
+        contextMenu.Items.Add(New ToolStripSeparator())
+        contextMenu.Items.Add(exitItem)
+
+        ' Assign handlers
+        AddHandler colorItem.Click, AddressOf SetFormBackgroundColorToolStripMenuItem_Click
+        AddHandler fontItem.Click, AddressOf SetFormFontToolStripMenuItem_Click
+        AddHandler exitItem.Click, AddressOf ExitToolStripMenuItem_Click
+
+        ' Attach context menu to the form
+        Me.ContextMenuStrip = contextMenu
+    End Sub
 
 
 End Class
