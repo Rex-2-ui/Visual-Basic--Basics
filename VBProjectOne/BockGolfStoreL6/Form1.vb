@@ -1,4 +1,10 @@
-﻿Option Strict On
+﻿
+' Project: Inventory Management Application
+' Author: Ali
+' Date: June 17, 2026
+' Description: Windows Forms application for managing inventory
+
+Option Strict On
 Public Class Form1
 
 

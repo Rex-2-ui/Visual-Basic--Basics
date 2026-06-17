@@ -231,9 +231,9 @@ Partial Class Form1
         Label4.ForeColor = Color.Black
         Label4.Location = New Point(74, 302)
         Label4.Name = "Label4"
-        Label4.Size = New Size(174, 23)
+        Label4.Size = New Size(183, 23)
         Label4.TabIndex = 3
-        Label4.Text = "Inentory Item Listing:"
+        Label4.Text = "Inventory Item Listing:"
         ' 
         ' InventoryItemListBox
         ' 
