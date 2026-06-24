@@ -31,7 +31,7 @@ Partial Class Form1
         MaxIterarationTextBox = New TextBox()
         ToleranceTextBox = New TextBox()
         NewtonButton = New Button()
-        Button2 = New Button()
+        SecantButton = New Button()
         ResultsTextBox = New TextBox()
         Label4 = New Label()
         SuspendLayout()
@@ -83,6 +83,7 @@ Partial Class Form1
         InitialApproxP0TextBox.Name = "InitialApproxP0TextBox"
         InitialApproxP0TextBox.Size = New Size(200, 30)
         InitialApproxP0TextBox.TabIndex = 4
+        InitialApproxP0TextBox.TextAlign = HorizontalAlignment.Right
         ' 
         ' InitialApprox1TextBox
         ' 
@@ -91,6 +92,7 @@ Partial Class Form1
         InitialApprox1TextBox.Name = "InitialApprox1TextBox"
         InitialApprox1TextBox.Size = New Size(200, 30)
         InitialApprox1TextBox.TabIndex = 5
+        InitialApprox1TextBox.TextAlign = HorizontalAlignment.Right
         ' 
         ' MaxIterarationTextBox
         ' 
@@ -99,6 +101,7 @@ Partial Class Form1
         MaxIterarationTextBox.Name = "MaxIterarationTextBox"
         MaxIterarationTextBox.Size = New Size(188, 30)
         MaxIterarationTextBox.TabIndex = 7
+        MaxIterarationTextBox.TextAlign = HorizontalAlignment.Right
         ' 
         ' ToleranceTextBox
         ' 
@@ -107,6 +110,7 @@ Partial Class Form1
         ToleranceTextBox.Name = "ToleranceTextBox"
         ToleranceTextBox.Size = New Size(188, 30)
         ToleranceTextBox.TabIndex = 6
+        ToleranceTextBox.TextAlign = HorizontalAlignment.Right
         ' 
         ' NewtonButton
         ' 
@@ -119,15 +123,15 @@ Partial Class Form1
         NewtonButton.Text = "Newton-Raphson Method"
         NewtonButton.UseVisualStyleBackColor = True
         ' 
-        ' Button2
+        ' SecantButton
         ' 
-        Button2.Location = New Point(620, 243)
-        Button2.Margin = New Padding(4, 3, 4, 3)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(319, 33)
-        Button2.TabIndex = 9
-        Button2.Text = "Secant Method"
-        Button2.UseVisualStyleBackColor = True
+        SecantButton.Location = New Point(620, 243)
+        SecantButton.Margin = New Padding(4, 3, 4, 3)
+        SecantButton.Name = "SecantButton"
+        SecantButton.Size = New Size(319, 33)
+        SecantButton.TabIndex = 9
+        SecantButton.Text = "Secant Method"
+        SecantButton.UseVisualStyleBackColor = True
         ' 
         ' ResultsTextBox
         ' 
@@ -153,7 +157,7 @@ Partial Class Form1
         ClientSize = New Size(1123, 550)
         Controls.Add(Label4)
         Controls.Add(ResultsTextBox)
-        Controls.Add(Button2)
+        Controls.Add(SecantButton)
         Controls.Add(NewtonButton)
         Controls.Add(MaxIterarationTextBox)
         Controls.Add(ToleranceTextBox)
@@ -180,7 +184,7 @@ Partial Class Form1
     Friend WithEvents MaxIterarationTextBox As TextBox
     Friend WithEvents ToleranceTextBox As TextBox
     Friend WithEvents NewtonButton As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents SecantButton As Button
     Friend WithEvents ResultsTextBox As TextBox
     Friend WithEvents Label4 As Label
 
