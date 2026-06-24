@@ -59,7 +59,7 @@ Partial Class Form1
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
         MenuStrip1.Padding = New Padding(8, 2, 0, 2)
-        MenuStrip1.Size = New Size(925, 28)
+        MenuStrip1.Size = New Size(942, 28)
         MenuStrip1.TabIndex = 0
         MenuStrip1.Text = "MenuStrip1"
         ' 
@@ -73,7 +73,7 @@ Partial Class Form1
         ' ExitToolStripMenuItem
         ' 
         ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        ExitToolStripMenuItem.Size = New Size(120, 26)
+        ExitToolStripMenuItem.Size = New Size(224, 26)
         ExitToolStripMenuItem.Text = " E&xit"
         ' 
         ' InventoryToolStripMenuItem
@@ -147,7 +147,7 @@ Partial Class Form1
         ' AboutToolStripMenuItem
         ' 
         AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        AboutToolStripMenuItem.Size = New Size(133, 26)
+        AboutToolStripMenuItem.Size = New Size(224, 26)
         AboutToolStripMenuItem.Text = "&About"
         ' 
         ' GroupBox1
@@ -268,7 +268,7 @@ Partial Class Form1
         AutoScaleDimensions = New SizeF(10F, 23F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.Info
-        ClientSize = New Size(925, 530)
+        ClientSize = New Size(942, 545)
         Controls.Add(TotalValueTextBox)
         Controls.Add(Label5)
         Controls.Add(InventoryItemListBox)
