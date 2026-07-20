@@ -50,5 +50,24 @@
         End If
     End Sub
 
+    Private Sub CascadeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CascadeToolStripMenuItem.Click
+        'Using the layoutMidMethod and the MdiLayout Enumeration
+        'Cascading
 
+        Me.LayoutMdi(MdiLayout.Cascade)
+    End Sub
+
+    Private Sub HorizontalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HorizontalToolStripMenuItem.Click
+        'Using the layoutMidMethod and the MdiLayout Enumeration
+        'Horizontal
+
+        Me.LayoutMdi(MdiLayout.TileHorizontal)
+    End Sub
+
+    Private Sub VerticalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerticalToolStripMenuItem.Click
+        'Using the layoutMidMethod and the MdiLayout Enumeration
+        'vertical
+
+        Me.LayoutMdi(MdiLayout.TileVertical)
+    End Sub
 End Class

@@ -58,13 +58,13 @@ Partial Class Form1
         ' CloseToolStripMenuItem1
         ' 
         CloseToolStripMenuItem1.Name = "CloseToolStripMenuItem1"
-        CloseToolStripMenuItem1.Size = New Size(224, 26)
+        CloseToolStripMenuItem1.Size = New Size(128, 26)
         CloseToolStripMenuItem1.Text = "Close"
         ' 
         ' ExitToolStripMenuItem1
         ' 
         ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1"
-        ExitToolStripMenuItem1.Size = New Size(224, 26)
+        ExitToolStripMenuItem1.Size = New Size(128, 26)
         ExitToolStripMenuItem1.Text = "Exit"
         ' 
         ' DisplayToolStripMenuItem
@@ -115,13 +115,13 @@ Partial Class Form1
         ' HorizontalToolStripMenuItem
         ' 
         HorizontalToolStripMenuItem.Name = "HorizontalToolStripMenuItem"
-        HorizontalToolStripMenuItem.Size = New Size(162, 26)
+        HorizontalToolStripMenuItem.Size = New Size(224, 26)
         HorizontalToolStripMenuItem.Text = "Horizontal"
         ' 
         ' VerticalToolStripMenuItem
         ' 
         VerticalToolStripMenuItem.Name = "VerticalToolStripMenuItem"
-        VerticalToolStripMenuItem.Size = New Size(162, 26)
+        VerticalToolStripMenuItem.Size = New Size(224, 26)
         VerticalToolStripMenuItem.Text = "Vertical"
         ' 
         ' Form1
