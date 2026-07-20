@@ -58,13 +58,13 @@ Partial Class Form1
         ' CloseToolStripMenuItem1
         ' 
         CloseToolStripMenuItem1.Name = "CloseToolStripMenuItem1"
-        CloseToolStripMenuItem1.Size = New Size(128, 26)
+        CloseToolStripMenuItem1.Size = New Size(224, 26)
         CloseToolStripMenuItem1.Text = "Close"
         ' 
         ' ExitToolStripMenuItem1
         ' 
         ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1"
-        ExitToolStripMenuItem1.Size = New Size(128, 26)
+        ExitToolStripMenuItem1.Size = New Size(224, 26)
         ExitToolStripMenuItem1.Text = "Exit"
         ' 
         ' DisplayToolStripMenuItem
@@ -77,19 +77,19 @@ Partial Class Form1
         ' Form2ToolStripMenuItem
         ' 
         Form2ToolStripMenuItem.Name = "Form2ToolStripMenuItem"
-        Form2ToolStripMenuItem.Size = New Size(224, 26)
+        Form2ToolStripMenuItem.Size = New Size(134, 26)
         Form2ToolStripMenuItem.Text = "Form2"
         ' 
         ' Form3ToolStripMenuItem
         ' 
         Form3ToolStripMenuItem.Name = "Form3ToolStripMenuItem"
-        Form3ToolStripMenuItem.Size = New Size(224, 26)
+        Form3ToolStripMenuItem.Size = New Size(134, 26)
         Form3ToolStripMenuItem.Text = "Form3"
         ' 
         ' Form4ToolStripMenuItem
         ' 
         Form4ToolStripMenuItem.Name = "Form4ToolStripMenuItem"
-        Form4ToolStripMenuItem.Size = New Size(224, 26)
+        Form4ToolStripMenuItem.Size = New Size(134, 26)
         Form4ToolStripMenuItem.Text = "Form4"
         ' 
         ' WindowsToolStripMenuItem
@@ -102,14 +102,14 @@ Partial Class Form1
         ' CascadeToolStripMenuItem
         ' 
         CascadeToolStripMenuItem.Name = "CascadeToolStripMenuItem"
-        CascadeToolStripMenuItem.Size = New Size(147, 26)
+        CascadeToolStripMenuItem.Size = New Size(224, 26)
         CascadeToolStripMenuItem.Text = "Cascade"
         ' 
         ' TileToolStripMenuItem
         ' 
         TileToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {HorizontalToolStripMenuItem, VerticalToolStripMenuItem})
         TileToolStripMenuItem.Name = "TileToolStripMenuItem"
-        TileToolStripMenuItem.Size = New Size(147, 26)
+        TileToolStripMenuItem.Size = New Size(224, 26)
         TileToolStripMenuItem.Text = "Tile"
         ' 
         ' HorizontalToolStripMenuItem
