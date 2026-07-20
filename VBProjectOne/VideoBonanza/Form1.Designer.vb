@@ -25,8 +25,8 @@ Partial Class Form1
         MovieTitleTextBox = New TextBox()
         Label1 = New Label()
         GroupBox1 = New GroupBox()
+        VideoTapeRadioButton = New RadioButton()
         DVDRadioButton = New RadioButton()
-        VideoTape = New RadioButton()
         MemberCheckBox = New CheckBox()
         NewReleasesCheckBox = New CheckBox()
         CalculateButton = New Button()
@@ -38,7 +38,21 @@ Partial Class Form1
         SubTotalTextBox = New TextBox()
         Label2 = New Label()
         Label3 = New Label()
+        MenuStrip1 = New MenuStrip()
+        FileToolStripMenuItem = New ToolStripMenuItem()
+        SummaryToolStripMenuItem = New ToolStripMenuItem()
+        ExitToolStripMenuItem = New ToolStripMenuItem()
+        EditToolStripMenuItem = New ToolStripMenuItem()
+        CalculateToolStripMenuItem = New ToolStripMenuItem()
+        ClearForNextItemToolStripMenuItem = New ToolStripMenuItem()
+        OrderCompleteToolStripMenuItem = New ToolStripMenuItem()
+        ToolStripSeparator1 = New ToolStripSeparator()
+        FontToolStripMenuItem = New ToolStripMenuItem()
+        ColorToolStripMenuItem = New ToolStripMenuItem()
+        HelpToolStripMenuItem = New ToolStripMenuItem()
+        AboutToolStripMenuItem = New ToolStripMenuItem()
         GroupBox1.SuspendLayout()
+        MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
         ' MovieTitleTextBox
@@ -61,7 +75,7 @@ Partial Class Form1
         ' 
         ' GroupBox1
         ' 
-        GroupBox1.Controls.Add(VideoTape)
+        GroupBox1.Controls.Add(VideoTapeRadioButton)
         GroupBox1.Controls.Add(DVDRadioButton)
         GroupBox1.Location = New Point(35, 118)
         GroupBox1.Margin = New Padding(4, 3, 4, 3)
@@ -71,6 +85,18 @@ Partial Class Form1
         GroupBox1.TabIndex = 2
         GroupBox1.TabStop = False
         GroupBox1.Text = "Format"
+        ' 
+        ' VideoTapeRadioButton
+        ' 
+        VideoTapeRadioButton.AutoSize = True
+        VideoTapeRadioButton.Location = New Point(11, 100)
+        VideoTapeRadioButton.Margin = New Padding(4, 3, 4, 3)
+        VideoTapeRadioButton.Name = "VideoTapeRadioButton"
+        VideoTapeRadioButton.Size = New Size(115, 27)
+        VideoTapeRadioButton.TabIndex = 1
+        VideoTapeRadioButton.TabStop = True
+        VideoTapeRadioButton.Text = "Video Tape"
+        VideoTapeRadioButton.UseVisualStyleBackColor = True
         ' 
         ' DVDRadioButton
         ' 
@@ -83,18 +109,6 @@ Partial Class Form1
         DVDRadioButton.TabStop = True
         DVDRadioButton.Text = "DVD"
         DVDRadioButton.UseVisualStyleBackColor = True
-        ' 
-        ' VideoTape
-        ' 
-        VideoTape.AutoSize = True
-        VideoTape.Location = New Point(11, 100)
-        VideoTape.Margin = New Padding(4, 3, 4, 3)
-        VideoTape.Name = "VideoTape"
-        VideoTape.Size = New Size(136, 27)
-        VideoTape.TabIndex = 1
-        VideoTape.TabStop = True
-        VideoTape.Text = "RadioButton2"
-        VideoTape.UseVisualStyleBackColor = True
         ' 
         ' MemberCheckBox
         ' 
@@ -197,11 +211,105 @@ Partial Class Form1
         Label3.TabIndex = 13
         Label3.Text = "SubTotal"
         ' 
+        ' MenuStrip1
+        ' 
+        MenuStrip1.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        MenuStrip1.ImageScalingSize = New Size(20, 20)
+        MenuStrip1.Items.AddRange(New ToolStripItem() {FileToolStripMenuItem, EditToolStripMenuItem, HelpToolStripMenuItem})
+        MenuStrip1.Location = New Point(0, 0)
+        MenuStrip1.Name = "MenuStrip1"
+        MenuStrip1.Size = New Size(956, 31)
+        MenuStrip1.TabIndex = 14
+        MenuStrip1.Text = "MenuStrip1"
+        ' 
+        ' FileToolStripMenuItem
+        ' 
+        FileToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {SummaryToolStripMenuItem, ExitToolStripMenuItem})
+        FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        FileToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.F
+        FileToolStripMenuItem.Size = New Size(50, 27)
+        FileToolStripMenuItem.Text = "&File"
+        ' 
+        ' SummaryToolStripMenuItem
+        ' 
+        SummaryToolStripMenuItem.Name = "SummaryToolStripMenuItem"
+        SummaryToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.S
+        SummaryToolStripMenuItem.Size = New Size(226, 28)
+        SummaryToolStripMenuItem.Text = "&Summary"
+        ' 
+        ' ExitToolStripMenuItem
+        ' 
+        ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        ExitToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.E
+        ExitToolStripMenuItem.Size = New Size(226, 28)
+        ExitToolStripMenuItem.Text = "&Exit"
+        ' 
+        ' EditToolStripMenuItem
+        ' 
+        EditToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {CalculateToolStripMenuItem, ClearForNextItemToolStripMenuItem, OrderCompleteToolStripMenuItem, ToolStripSeparator1, FontToolStripMenuItem, ColorToolStripMenuItem})
+        EditToolStripMenuItem.Name = "EditToolStripMenuItem"
+        EditToolStripMenuItem.Size = New Size(53, 27)
+        EditToolStripMenuItem.Text = "&Edit"
+        ' 
+        ' CalculateToolStripMenuItem
+        ' 
+        CalculateToolStripMenuItem.Name = "CalculateToolStripMenuItem"
+        CalculateToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.A
+        CalculateToolStripMenuItem.Size = New Size(305, 28)
+        CalculateToolStripMenuItem.Text = "C&alculate"
+        ' 
+        ' ClearForNextItemToolStripMenuItem
+        ' 
+        ClearForNextItemToolStripMenuItem.Name = "ClearForNextItemToolStripMenuItem"
+        ClearForNextItemToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.A
+        ClearForNextItemToolStripMenuItem.Size = New Size(305, 28)
+        ClearForNextItemToolStripMenuItem.Text = "C&lear For Next Item"
+        ' 
+        ' OrderCompleteToolStripMenuItem
+        ' 
+        OrderCompleteToolStripMenuItem.Name = "OrderCompleteToolStripMenuItem"
+        OrderCompleteToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.O
+        OrderCompleteToolStripMenuItem.Size = New Size(305, 28)
+        OrderCompleteToolStripMenuItem.Text = "&Order Complete"
+        ' 
+        ' ToolStripSeparator1
+        ' 
+        ToolStripSeparator1.Name = "ToolStripSeparator1"
+        ToolStripSeparator1.Size = New Size(242, 6)
+        ' 
+        ' FontToolStripMenuItem
+        ' 
+        FontToolStripMenuItem.Name = "FontToolStripMenuItem"
+        FontToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.F
+        FontToolStripMenuItem.Size = New Size(305, 28)
+        FontToolStripMenuItem.Text = "&Font"
+        ' 
+        ' ColorToolStripMenuItem
+        ' 
+        ColorToolStripMenuItem.Name = "ColorToolStripMenuItem"
+        ColorToolStripMenuItem.ShortcutKeys = Keys.Alt Or Keys.C
+        ColorToolStripMenuItem.Size = New Size(305, 28)
+        ColorToolStripMenuItem.Text = "&Color"
+        ' 
+        ' HelpToolStripMenuItem
+        ' 
+        HelpToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AboutToolStripMenuItem})
+        HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        HelpToolStripMenuItem.ShortcutKeys = Keys.Alt Or Keys.A
+        HelpToolStripMenuItem.Size = New Size(60, 27)
+        HelpToolStripMenuItem.Text = "&Help"
+        ' 
+        ' AboutToolStripMenuItem
+        ' 
+        AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        AboutToolStripMenuItem.Size = New Size(141, 28)
+        AboutToolStripMenuItem.Text = "&About"
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(10F, 23F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1050, 526)
+        ClientSize = New Size(956, 526)
         Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(SubTotalTextBox)
@@ -216,12 +324,16 @@ Partial Class Form1
         Controls.Add(GroupBox1)
         Controls.Add(Label1)
         Controls.Add(MovieTitleTextBox)
+        Controls.Add(MenuStrip1)
         Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        MainMenuStrip = MenuStrip1
         Margin = New Padding(4, 3, 4, 3)
         Name = "Form1"
         Text = "Form1"
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
+        MenuStrip1.ResumeLayout(False)
+        MenuStrip1.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -229,7 +341,7 @@ Partial Class Form1
     Friend WithEvents MovieTitleTextBox As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents VideoTape As RadioButton
+    Friend WithEvents VideoTapeRadioButton As RadioButton
     Friend WithEvents DVDRadioButton As RadioButton
     Friend WithEvents MemberCheckBox As CheckBox
     Friend WithEvents NewReleasesCheckBox As CheckBox
@@ -242,5 +354,18 @@ Partial Class Form1
     Friend WithEvents SubTotalTextBox As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SummaryToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CalculateToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ClearForNextItemToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OrderCompleteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents FontToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ColorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
 
 End Class
