@@ -23,7 +23,22 @@ Module Program
 
 
         Dim Name As String
-        Dim Age As
+        Dim Age As Integer
+
+        Console.WriteLine(" Enter Your Name ")
+        Name = Console.ReadLine()
+
+        Console.WriteLine(" How old are You")
+        Age = Console.ReadLine()
+
+        If Age < 18 Then
+            Console.WriteLine("Wa kyi gu hor, Bare back paaa")
+        Else
+            Console.WriteLine(" You are elegible for 18+ activities ")
+        End If
+
+        Console.WriteLine(" Mrs / Miss" & Name & " Your age is " & Age)
+
 
     End Sub
 End Module
