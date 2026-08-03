@@ -91,7 +91,7 @@ Module Program
                 Console.WriteLine("Good " & " Grade = C ")
 
             ElseIf TotalScore > 50 Then
-                Console.WriteLine(d " & " Grade = D ")
+                Console.WriteLine("God " & " Grade = D ")
 
 
             End If
