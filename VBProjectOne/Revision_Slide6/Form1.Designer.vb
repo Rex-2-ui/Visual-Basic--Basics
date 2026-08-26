@@ -73,13 +73,13 @@ Partial Class Form1
         ' CountToolStripMenuItem
         ' 
         CountToolStripMenuItem.Name = "CountToolStripMenuItem"
-        CountToolStripMenuItem.Size = New Size(131, 26)
+        CountToolStripMenuItem.Size = New Size(224, 26)
         CountToolStripMenuItem.Text = "Count"
         ' 
         ' ExitToolStripMenuItem
         ' 
         ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        ExitToolStripMenuItem.Size = New Size(131, 26)
+        ExitToolStripMenuItem.Size = New Size(224, 26)
         ExitToolStripMenuItem.Text = "Exit"
         ' 
         ' EmployeeToolStripMenuItem
@@ -128,26 +128,26 @@ Partial Class Form1
         ' AddDepartmentToolStripMenuItem
         ' 
         AddDepartmentToolStripMenuItem.Name = "AddDepartmentToolStripMenuItem"
-        AddDepartmentToolStripMenuItem.Size = New Size(255, 26)
+        AddDepartmentToolStripMenuItem.Size = New Size(253, 26)
         AddDepartmentToolStripMenuItem.Text = "Add Department"
         ' 
         ' CountDeparmentsToolStripMenuItem
         ' 
         CountDeparmentsToolStripMenuItem.Name = "CountDeparmentsToolStripMenuItem"
-        CountDeparmentsToolStripMenuItem.Size = New Size(255, 26)
+        CountDeparmentsToolStripMenuItem.Size = New Size(253, 26)
         CountDeparmentsToolStripMenuItem.Text = "Count Deparments"
         ' 
         ' RemoveDepartmentToolStripMenuItem
         ' 
         RemoveDepartmentToolStripMenuItem.Name = "RemoveDepartmentToolStripMenuItem"
-        RemoveDepartmentToolStripMenuItem.Size = New Size(255, 26)
+        RemoveDepartmentToolStripMenuItem.Size = New Size(253, 26)
         RemoveDepartmentToolStripMenuItem.Text = "Remove Department"
         ' 
         ' RemoveAtDepartmentToolStripMenuItem
         ' 
         RemoveAtDepartmentToolStripMenuItem.Name = "RemoveAtDepartmentToolStripMenuItem"
-        RemoveAtDepartmentToolStripMenuItem.Size = New Size(255, 26)
-        RemoveAtDepartmentToolStripMenuItem.Text = "Remove At \Department"
+        RemoveAtDepartmentToolStripMenuItem.Size = New Size(253, 26)
+        RemoveAtDepartmentToolStripMenuItem.Text = "Remove At  Department"
         ' 
         ' HelpToolStripMenuItem
         ' 

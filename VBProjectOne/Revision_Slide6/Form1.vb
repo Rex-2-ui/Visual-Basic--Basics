@@ -1,5 +1,10 @@
 ﻿Public Class Form1
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles EmployeeListBox.SelectedIndexChanged
+        If EmployeeListBox.SelectedIndex = -1 Then
+            MessageBox.Show("You must select an employee member to display.", "No Selection Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
+            MessageBox.Show(EmployeeListBox.SelectedItem.ToString, "Current selection", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
 
     End Sub
 
@@ -40,5 +45,27 @@
         If ResponseDialogResult = DialogResult.Yes Then
             EmployeeListBox.Items.Clear()
         End If
+    End Sub
+
+    Private Sub ResetEmployeeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetEmployeeToolStripMenuItem.Click
+        DepartmentComboBox.SelectedIndex = -1
+        TitleComboBox.SelectedIndex = -1
+        EmployeeNameTextBox.Clear()
+        AnnualSalaryTextBox.Clear()
+
+        'Unselect title and department ComboBox controls and
+        'set Text property to empty string
+        TitleComboBox.SelectedIndex = -1
+        DepartmentComboBox.SelectedIndex = -1
+        TitleComboBox.Text = String.Empty
+        DepartmentComboBox.Text = String.Empty
+
+        'Unselect the currently selected faculty member in the Listbox
+        EmployeeListBox.SelectedIndex = -1
+
+        'Reset focus to the employee name TextBox  
+        EmployeeNameTextBox.Focus()
+
+
     End Sub
 End Class
