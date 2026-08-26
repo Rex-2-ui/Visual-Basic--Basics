@@ -68,4 +68,16 @@
 
 
     End Sub
+
+    Private Sub CountDeparmentsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CountDeparmentsToolStripMenuItem.Click
+        MessageBox.Show("There are " & DepartmentComboBox.Items.Count.ToString & " departments.", "Department Count", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
+    Private Sub RemoveDepartmentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveDepartmentToolStripMenuItem.Click
+        If DepartmentComboBox.SelectedIndex = -1 Then
+            MessageBox.Show("You must select a department to remove.", "No Selection Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        ElseIf DepartmentComboBox.SelectedIndex = 0 Then
+            DepartmentComboBox.Items.RemoveAt(DepartmentComboBox.SelectedIndex)
+        End If
+    End Sub
 End Class

@@ -73,13 +73,13 @@ Partial Class Form1
         ' CountToolStripMenuItem
         ' 
         CountToolStripMenuItem.Name = "CountToolStripMenuItem"
-        CountToolStripMenuItem.Size = New Size(224, 26)
+        CountToolStripMenuItem.Size = New Size(131, 26)
         CountToolStripMenuItem.Text = "Count"
         ' 
         ' ExitToolStripMenuItem
         ' 
         ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        ExitToolStripMenuItem.Size = New Size(224, 26)
+        ExitToolStripMenuItem.Size = New Size(131, 26)
         ExitToolStripMenuItem.Text = "Exit"
         ' 
         ' EmployeeToolStripMenuItem
