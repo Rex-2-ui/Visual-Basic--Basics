@@ -23,32 +23,32 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         MenuStrip1 = New MenuStrip()
-        SelectedEmployeeListBox = New ListBox()
+        FileToolStripMenuItem = New ToolStripMenuItem()
+        CountToolStripMenuItem = New ToolStripMenuItem()
+        ExitToolStripMenuItem = New ToolStripMenuItem()
+        EmployeeToolStripMenuItem = New ToolStripMenuItem()
+        AddEmployeeToolStripMenuItem = New ToolStripMenuItem()
+        ResetEmployeeToolStripMenuItem = New ToolStripMenuItem()
+        ToolStripSeparator1 = New ToolStripSeparator()
+        ClearEmployeeListToolStripMenuItem = New ToolStripMenuItem()
+        DisplaySelectedEmployeeToolStripMenuItem = New ToolStripMenuItem()
+        DepartmentToolStripMenuItem = New ToolStripMenuItem()
+        AddDepartmentToolStripMenuItem = New ToolStripMenuItem()
+        CountDeparmentsToolStripMenuItem = New ToolStripMenuItem()
+        RemoveDepartmentToolStripMenuItem = New ToolStripMenuItem()
+        RemoveAtDepartmentToolStripMenuItem = New ToolStripMenuItem()
+        HelpToolStripMenuItem = New ToolStripMenuItem()
+        AboutToolStripMenuItem = New ToolStripMenuItem()
+        EmployeeListBox = New ListBox()
         GroupBox1 = New GroupBox()
+        AnnualSalaryTextBox = New TextBox()
+        Label4 = New Label()
         EmployeeNameTextBox = New TextBox()
         Label3 = New Label()
         Label2 = New Label()
         Label1 = New Label()
         DepartmentComboBox = New ComboBox()
         TitleComboBox = New ComboBox()
-        Label4 = New Label()
-        AnnualSaleryTextBox = New TextBox()
-        FileToolStripMenuItem = New ToolStripMenuItem()
-        EmployeeToolStripMenuItem = New ToolStripMenuItem()
-        DepartmentToolStripMenuItem = New ToolStripMenuItem()
-        HelpToolStripMenuItem = New ToolStripMenuItem()
-        CountToolStripMenuItem = New ToolStripMenuItem()
-        ExitToolStripMenuItem = New ToolStripMenuItem()
-        AddEmployeeToolStripMenuItem = New ToolStripMenuItem()
-        ResetEmployeeToolStripMenuItem = New ToolStripMenuItem()
-        ToolStripSeparator1 = New ToolStripSeparator()
-        ClearEmployeeListToolStripMenuItem = New ToolStripMenuItem()
-        DisplaySelectedEmployeeToolStripMenuItem = New ToolStripMenuItem()
-        AddDepartmentToolStripMenuItem = New ToolStripMenuItem()
-        CountDeparmentsToolStripMenuItem = New ToolStripMenuItem()
-        RemoveDepartmentToolStripMenuItem = New ToolStripMenuItem()
-        RemoveAtDepartmentToolStripMenuItem = New ToolStripMenuItem()
-        AboutToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip1.SuspendLayout()
         GroupBox1.SuspendLayout()
         SuspendLayout()
@@ -63,18 +63,117 @@ Partial Class Form1
         MenuStrip1.TabIndex = 0
         MenuStrip1.Text = "MenuStrip1"
         ' 
-        ' SelectedEmployeeListBox
+        ' FileToolStripMenuItem
         ' 
-        SelectedEmployeeListBox.FormattingEnabled = True
-        SelectedEmployeeListBox.Location = New Point(51, 339)
-        SelectedEmployeeListBox.Name = "SelectedEmployeeListBox"
-        SelectedEmployeeListBox.Size = New Size(677, 124)
-        SelectedEmployeeListBox.Sorted = True
-        SelectedEmployeeListBox.TabIndex = 3
+        FileToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {CountToolStripMenuItem, ExitToolStripMenuItem})
+        FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        FileToolStripMenuItem.Size = New Size(46, 24)
+        FileToolStripMenuItem.Text = "File"
+        ' 
+        ' CountToolStripMenuItem
+        ' 
+        CountToolStripMenuItem.Name = "CountToolStripMenuItem"
+        CountToolStripMenuItem.Size = New Size(131, 26)
+        CountToolStripMenuItem.Text = "Count"
+        ' 
+        ' ExitToolStripMenuItem
+        ' 
+        ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        ExitToolStripMenuItem.Size = New Size(131, 26)
+        ExitToolStripMenuItem.Text = "Exit"
+        ' 
+        ' EmployeeToolStripMenuItem
+        ' 
+        EmployeeToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AddEmployeeToolStripMenuItem, ResetEmployeeToolStripMenuItem, ToolStripSeparator1, ClearEmployeeListToolStripMenuItem, DisplaySelectedEmployeeToolStripMenuItem})
+        EmployeeToolStripMenuItem.Name = "EmployeeToolStripMenuItem"
+        EmployeeToolStripMenuItem.Size = New Size(89, 24)
+        EmployeeToolStripMenuItem.Text = "Employee"
+        ' 
+        ' AddEmployeeToolStripMenuItem
+        ' 
+        AddEmployeeToolStripMenuItem.Name = "AddEmployeeToolStripMenuItem"
+        AddEmployeeToolStripMenuItem.Size = New Size(272, 26)
+        AddEmployeeToolStripMenuItem.Text = "Add Employee"
+        ' 
+        ' ResetEmployeeToolStripMenuItem
+        ' 
+        ResetEmployeeToolStripMenuItem.Name = "ResetEmployeeToolStripMenuItem"
+        ResetEmployeeToolStripMenuItem.Size = New Size(272, 26)
+        ResetEmployeeToolStripMenuItem.Text = "Reset Employee"
+        ' 
+        ' ToolStripSeparator1
+        ' 
+        ToolStripSeparator1.Name = "ToolStripSeparator1"
+        ToolStripSeparator1.Size = New Size(269, 6)
+        ' 
+        ' ClearEmployeeListToolStripMenuItem
+        ' 
+        ClearEmployeeListToolStripMenuItem.Name = "ClearEmployeeListToolStripMenuItem"
+        ClearEmployeeListToolStripMenuItem.Size = New Size(272, 26)
+        ClearEmployeeListToolStripMenuItem.Text = "Clear Employee List"
+        ' 
+        ' DisplaySelectedEmployeeToolStripMenuItem
+        ' 
+        DisplaySelectedEmployeeToolStripMenuItem.Name = "DisplaySelectedEmployeeToolStripMenuItem"
+        DisplaySelectedEmployeeToolStripMenuItem.Size = New Size(272, 26)
+        DisplaySelectedEmployeeToolStripMenuItem.Text = "Display Selected Employee"
+        ' 
+        ' DepartmentToolStripMenuItem
+        ' 
+        DepartmentToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AddDepartmentToolStripMenuItem, CountDeparmentsToolStripMenuItem, RemoveDepartmentToolStripMenuItem, RemoveAtDepartmentToolStripMenuItem})
+        DepartmentToolStripMenuItem.Name = "DepartmentToolStripMenuItem"
+        DepartmentToolStripMenuItem.Size = New Size(103, 24)
+        DepartmentToolStripMenuItem.Text = "Department"
+        ' 
+        ' AddDepartmentToolStripMenuItem
+        ' 
+        AddDepartmentToolStripMenuItem.Name = "AddDepartmentToolStripMenuItem"
+        AddDepartmentToolStripMenuItem.Size = New Size(255, 26)
+        AddDepartmentToolStripMenuItem.Text = "Add Department"
+        ' 
+        ' CountDeparmentsToolStripMenuItem
+        ' 
+        CountDeparmentsToolStripMenuItem.Name = "CountDeparmentsToolStripMenuItem"
+        CountDeparmentsToolStripMenuItem.Size = New Size(255, 26)
+        CountDeparmentsToolStripMenuItem.Text = "Count Deparments"
+        ' 
+        ' RemoveDepartmentToolStripMenuItem
+        ' 
+        RemoveDepartmentToolStripMenuItem.Name = "RemoveDepartmentToolStripMenuItem"
+        RemoveDepartmentToolStripMenuItem.Size = New Size(255, 26)
+        RemoveDepartmentToolStripMenuItem.Text = "Remove Department"
+        ' 
+        ' RemoveAtDepartmentToolStripMenuItem
+        ' 
+        RemoveAtDepartmentToolStripMenuItem.Name = "RemoveAtDepartmentToolStripMenuItem"
+        RemoveAtDepartmentToolStripMenuItem.Size = New Size(255, 26)
+        RemoveAtDepartmentToolStripMenuItem.Text = "Remove At \Department"
+        ' 
+        ' HelpToolStripMenuItem
+        ' 
+        HelpToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AboutToolStripMenuItem})
+        HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        HelpToolStripMenuItem.Size = New Size(55, 24)
+        HelpToolStripMenuItem.Text = "Help"
+        ' 
+        ' AboutToolStripMenuItem
+        ' 
+        AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        AboutToolStripMenuItem.Size = New Size(133, 26)
+        AboutToolStripMenuItem.Text = "About"
+        ' 
+        ' EmployeeListBox
+        ' 
+        EmployeeListBox.FormattingEnabled = True
+        EmployeeListBox.Location = New Point(51, 339)
+        EmployeeListBox.Name = "EmployeeListBox"
+        EmployeeListBox.Size = New Size(677, 124)
+        EmployeeListBox.Sorted = True
+        EmployeeListBox.TabIndex = 3
         ' 
         ' GroupBox1
         ' 
-        GroupBox1.Controls.Add(AnnualSaleryTextBox)
+        GroupBox1.Controls.Add(AnnualSalaryTextBox)
         GroupBox1.Controls.Add(Label4)
         GroupBox1.Controls.Add(EmployeeNameTextBox)
         GroupBox1.Controls.Add(Label3)
@@ -88,6 +187,22 @@ Partial Class Form1
         GroupBox1.TabIndex = 7
         GroupBox1.TabStop = False
         GroupBox1.Text = "GroupBox1"
+        ' 
+        ' AnnualSalaryTextBox
+        ' 
+        AnnualSalaryTextBox.Location = New Point(265, 197)
+        AnnualSalaryTextBox.Name = "AnnualSalaryTextBox"
+        AnnualSalaryTextBox.Size = New Size(245, 27)
+        AnnualSalaryTextBox.TabIndex = 16
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Location = New Point(24, 200)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(102, 20)
+        Label4.TabIndex = 15
+        Label4.Text = "Annual Salary:"
         ' 
         ' EmployeeNameTextBox
         ' 
@@ -144,128 +259,13 @@ Partial Class Form1
         TitleComboBox.Sorted = True
         TitleComboBox.TabIndex = 9
         ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Location = New Point(24, 200)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(102, 20)
-        Label4.TabIndex = 15
-        Label4.Text = "Annual Salary:"
-        ' 
-        ' AnnualSaleryTextBox
-        ' 
-        AnnualSaleryTextBox.Location = New Point(265, 197)
-        AnnualSaleryTextBox.Name = "AnnualSaleryTextBox"
-        AnnualSaleryTextBox.Size = New Size(245, 27)
-        AnnualSaleryTextBox.TabIndex = 16
-        ' 
-        ' FileToolStripMenuItem
-        ' 
-        FileToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {CountToolStripMenuItem, ExitToolStripMenuItem})
-        FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        FileToolStripMenuItem.Size = New Size(46, 24)
-        FileToolStripMenuItem.Text = "File"
-        ' 
-        ' EmployeeToolStripMenuItem
-        ' 
-        EmployeeToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AddEmployeeToolStripMenuItem, ResetEmployeeToolStripMenuItem, ToolStripSeparator1, ClearEmployeeListToolStripMenuItem, DisplaySelectedEmployeeToolStripMenuItem})
-        EmployeeToolStripMenuItem.Name = "EmployeeToolStripMenuItem"
-        EmployeeToolStripMenuItem.Size = New Size(89, 24)
-        EmployeeToolStripMenuItem.Text = "Employee"
-        ' 
-        ' DepartmentToolStripMenuItem
-        ' 
-        DepartmentToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AddDepartmentToolStripMenuItem, CountDeparmentsToolStripMenuItem, RemoveDepartmentToolStripMenuItem, RemoveAtDepartmentToolStripMenuItem})
-        DepartmentToolStripMenuItem.Name = "DepartmentToolStripMenuItem"
-        DepartmentToolStripMenuItem.Size = New Size(103, 24)
-        DepartmentToolStripMenuItem.Text = "Department"
-        ' 
-        ' HelpToolStripMenuItem
-        ' 
-        HelpToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AboutToolStripMenuItem})
-        HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        HelpToolStripMenuItem.Size = New Size(55, 24)
-        HelpToolStripMenuItem.Text = "Help"
-        ' 
-        ' CountToolStripMenuItem
-        ' 
-        CountToolStripMenuItem.Name = "CountToolStripMenuItem"
-        CountToolStripMenuItem.Size = New Size(224, 26)
-        CountToolStripMenuItem.Text = "Count"
-        ' 
-        ' ExitToolStripMenuItem
-        ' 
-        ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        ExitToolStripMenuItem.Size = New Size(224, 26)
-        ExitToolStripMenuItem.Text = "Exit"
-        ' 
-        ' AddEmployeeToolStripMenuItem
-        ' 
-        AddEmployeeToolStripMenuItem.Name = "AddEmployeeToolStripMenuItem"
-        AddEmployeeToolStripMenuItem.Size = New Size(272, 26)
-        AddEmployeeToolStripMenuItem.Text = "Add Employee"
-        ' 
-        ' ResetEmployeeToolStripMenuItem
-        ' 
-        ResetEmployeeToolStripMenuItem.Name = "ResetEmployeeToolStripMenuItem"
-        ResetEmployeeToolStripMenuItem.Size = New Size(272, 26)
-        ResetEmployeeToolStripMenuItem.Text = "Reset Employee"
-        ' 
-        ' ToolStripSeparator1
-        ' 
-        ToolStripSeparator1.Name = "ToolStripSeparator1"
-        ToolStripSeparator1.Size = New Size(269, 6)
-        ' 
-        ' ClearEmployeeListToolStripMenuItem
-        ' 
-        ClearEmployeeListToolStripMenuItem.Name = "ClearEmployeeListToolStripMenuItem"
-        ClearEmployeeListToolStripMenuItem.Size = New Size(272, 26)
-        ClearEmployeeListToolStripMenuItem.Text = "Clear Employee List"
-        ' 
-        ' DisplaySelectedEmployeeToolStripMenuItem
-        ' 
-        DisplaySelectedEmployeeToolStripMenuItem.Name = "DisplaySelectedEmployeeToolStripMenuItem"
-        DisplaySelectedEmployeeToolStripMenuItem.Size = New Size(272, 26)
-        DisplaySelectedEmployeeToolStripMenuItem.Text = "Display Selected Employee"
-        ' 
-        ' AddDepartmentToolStripMenuItem
-        ' 
-        AddDepartmentToolStripMenuItem.Name = "AddDepartmentToolStripMenuItem"
-        AddDepartmentToolStripMenuItem.Size = New Size(255, 26)
-        AddDepartmentToolStripMenuItem.Text = "Add Department"
-        ' 
-        ' CountDeparmentsToolStripMenuItem
-        ' 
-        CountDeparmentsToolStripMenuItem.Name = "CountDeparmentsToolStripMenuItem"
-        CountDeparmentsToolStripMenuItem.Size = New Size(255, 26)
-        CountDeparmentsToolStripMenuItem.Text = "Count Deparments"
-        ' 
-        ' RemoveDepartmentToolStripMenuItem
-        ' 
-        RemoveDepartmentToolStripMenuItem.Name = "RemoveDepartmentToolStripMenuItem"
-        RemoveDepartmentToolStripMenuItem.Size = New Size(255, 26)
-        RemoveDepartmentToolStripMenuItem.Text = "Remove Department"
-        ' 
-        ' RemoveAtDepartmentToolStripMenuItem
-        ' 
-        RemoveAtDepartmentToolStripMenuItem.Name = "RemoveAtDepartmentToolStripMenuItem"
-        RemoveAtDepartmentToolStripMenuItem.Size = New Size(255, 26)
-        RemoveAtDepartmentToolStripMenuItem.Text = "Remove At \Department"
-        ' 
-        ' AboutToolStripMenuItem
-        ' 
-        AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        AboutToolStripMenuItem.Size = New Size(224, 26)
-        AboutToolStripMenuItem.Text = "About"
-        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(847, 571)
         Controls.Add(GroupBox1)
-        Controls.Add(SelectedEmployeeListBox)
+        Controls.Add(EmployeeListBox)
         Controls.Add(MenuStrip1)
         MainMenuStrip = MenuStrip1
         Name = "Form1"
@@ -279,7 +279,7 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents SelectedEmployeeListBox As ListBox
+    Friend WithEvents EmployeeListBox As ListBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label4 As Label
     Friend WithEvents EmployeeNameTextBox As TextBox
@@ -292,7 +292,7 @@ Partial Class Form1
     Friend WithEvents EmployeeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DepartmentToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AnnualSaleryTextBox As TextBox
+    Friend WithEvents AnnualSalaryTextBox As TextBox
     Friend WithEvents CountToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AddEmployeeToolStripMenuItem As ToolStripMenuItem
